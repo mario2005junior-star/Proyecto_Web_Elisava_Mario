@@ -6,12 +6,12 @@ Desarrollar el proyecto web de Elisava de forma coherente con su concepto, los r
 ## Objetivos por definir
 Estos puntos todavía necesitan información del usuario:
 - [ hecho ] Definir el tema y propósito de la web.
-- [ ] Formular y confirmar la pregunta de investigación.
-- [ ] Identificar el público destinatario.
-- [ ] Recopilar los requisitos y criterios de evaluación de la asignatura.
-- [ ] Definir estructura, contenidos y recorrido de navegación.
-- [ ] Acordar dirección visual: referencias, tipografía, paleta y estilo.
-- [ ] Establecer funcionalidades e interacciones necesarias.
+- [ hecho ] Formular y confirmar la pregunta de investigación.
+- [ hecho ] Identificar el público destinatario.
+- [ falta subir ] Recopilar los requisitos y criterios de evaluación de la asignatura.
+- [ falta confirmar ] Definir estructura, contenidos y recorrido de navegación.
+- [ falta confirmar ] Acordar dirección visual: referencias, tipografía, paleta y estilo.
+- [ hecho ] Establecer funcionalidades e interacciones necesarias.
 
 ## Primeras tareas técnicas
 - [ ] Revisar la estructura actual del repositorio.
