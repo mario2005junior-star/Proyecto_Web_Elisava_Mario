@@ -32,6 +32,7 @@ Antes de dar una tarea por terminada:
 3. Revisa posibles errores de consola cuando sea posible.
 4. Comprueba el comportamiento en móvil y escritorio cuando aplique.
 5. Resume qué se ha cambiado y qué queda pendiente.
+6. Antes de implementar cualquier código, primero explícamelo y yo darte el visto bueno para poder implementarlo.
 
 ## Decisiones específicas
 Añade aquí las decisiones visuales, técnicas y de evaluación que el usuario confirme. Si un criterio está en conflicto con un requisito docente, pregunta antes de resolverlo por tu cuenta.
