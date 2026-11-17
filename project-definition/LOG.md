@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
 - **Estado:** completado en rama `claude/pregunta-investigacion`, pendiente de fusionar.
 
+## 2026-11-17 — Prueba: descripción del proyecto
+- **Decisión/cambio:** Se hace una prueba para comprobar que el asistente entiende el proyecto. La descripción registrada es: web personal con los datos de Spotify, con tres partes: estadísticas musicales (artistas más escuchados, tipos de música), salud auditiva (cómo afecta la música a los oídos, según los datos recopilados) y calculadora auditiva (el visitante indica su tiempo de escucha semanal y el tipo de auriculares que más usa, y obtiene una estimación de su salud auditiva). Público: jóvenes de 18 a 30 años.
+- **Motivo:** Comprobar que el asistente describe el proyecto igual que `CONTEXT.md`.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado. La pregunta de investigación ya está confirmada (ver entrada del mismo día), así que queda pendiente solo el concepto visual y las páginas finales.
+
 ## 2026-11-17 — Normas de trabajo para Claude y ChatGPT
 - **Decisión/cambio:** Claude lee `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` al empezar cada sesión de trabajo en el repositorio, y aplica `INSTRUCTIONS.md` en todo momento. Esto incluye no subir cambios ni tocar `main` sin que el usuario lo pida, explicar antes de implementar código y registrar las decisiones relevantes en `LOG.md`.
 - **Motivo:** Que el trabajo con Claude siga las mismas reglas que el asistente de ChatGPT, y que no dependa de recordarlas en cada conversación.
