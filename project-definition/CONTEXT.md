@@ -25,9 +25,11 @@ La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Son toda
 - Encabezado «Mi vida» y texto provisional «Una frase que explica de qué trata».
 - Botón «Ver mi pregunta» que muestra un párrafo oculto con el texto provisional «Aquí va mi pregunta de investigación».
 
+## Pregunta de investigación
+«¿Cómo está mi salud auditiva durante un año entero?»
+
 ## Pendiente de confirmar
 No inventar ni dar por establecido:
-- La pregunta de investigación definitiva.
 - El concepto, la narrativa y la dirección visual.
 - Las páginas, secciones y funcionalidades finales.
 - Los requisitos concretos de la asignatura y sus criterios de evaluación.

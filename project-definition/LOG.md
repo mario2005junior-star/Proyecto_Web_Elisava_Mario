@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-17 — Pregunta de investigación confirmada
+- **Decisión/cambio:** La pregunta de investigación queda confirmada: «¿Cómo está mi salud auditiva durante un año entero?». Se registra en `CONTEXT.md` y se marca como completada en `INSTRUCTIONS.md`.
+- **Motivo:** Es la pregunta que el usuario ha decidido para la web.
+- **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
+- **Estado:** completado en rama `claude/pregunta-investigacion`, pendiente de fusionar.
+
 ## 2026-11-17 — Normas de trabajo para Claude y ChatGPT
 - **Decisión/cambio:** Claude lee `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` al empezar cada sesión de trabajo en el repositorio, y aplica `INSTRUCTIONS.md` en todo momento. Esto incluye no subir cambios ni tocar `main` sin que el usuario lo pida, explicar antes de implementar código y registrar las decisiones relevantes en `LOG.md`.
 - **Motivo:** Que el trabajo con Claude siga las mismas reglas que el asistente de ChatGPT, y que no dependa de recordarlas en cada conversación.
