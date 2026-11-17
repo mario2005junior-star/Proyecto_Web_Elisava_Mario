@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-17 — Normas de trabajo para Claude y ChatGPT
+- **Decisión/cambio:** Claude lee `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` al empezar cada sesión de trabajo en el repositorio, y aplica `INSTRUCTIONS.md` en todo momento. Esto incluye no subir cambios ni tocar `main` sin que el usuario lo pida, explicar antes de implementar código y registrar las decisiones relevantes en `LOG.md`.
+- **Motivo:** Que el trabajo con Claude siga las mismas reglas que el asistente de ChatGPT, y que no dependa de recordarlas en cada conversación.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado en rama `claude/registro-normas-log`, pendiente de subida.
+
 ## 2026-11-17 — Prueba con ChatGPT (proyecto de ChatGPT)
 - **Decisión/cambio:** Se crea un proyecto en ChatGPT con `SOUL.md` en las instrucciones y se suben `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` como archivos. Primero se intentó que leyera los archivos desde GitHub, pero devolvió un error 404 y respondió con la versión antigua (siete archivos). Tras subir los archivos nuevos directamente, ChatGPT resume bien el contexto, sigue el proceso de `INSTRUCTIONS.md` y no inventa el concepto visual ni la pregunta de investigación.
 - **Motivo:** Comprobar cómo ajusta y completa ChatGPT los documentos, como pide el ejercicio.
