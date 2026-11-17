@@ -66,7 +66,7 @@ Desarrollar el proyecto web de Elisava de forma coherente con su concepto, los r
 - [x] Definir el tema y propósito de la web.
 - [x] Identificar el público destinatario.
 - [x] Establecer funcionalidades e interacciones necesarias.
-- [ ] Confirmar la pregunta de investigación.
+- [x] Confirmar la pregunta de investigación.
 - [ ] Recopilar los requisitos y criterios de evaluación de la asignatura.
 - [ ] Definir estructura, contenidos y recorrido de navegación.
 - [ ] Acordar la dirección visual: referencias, tipografía, paleta y estilo.
