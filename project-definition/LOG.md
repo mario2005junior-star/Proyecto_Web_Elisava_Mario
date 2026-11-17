@@ -8,6 +8,25 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
 - **Estado:** completado en rama `claude/pregunta-investigacion`, pendiente de fusionar.
 
+## 2026-11-17 — Revisión del contenido del Figma «Mis datos de Spotify»
+- **Decisión/cambio:** A petición del usuario, el asistente leyó el archivo de Figma «Mis datos de Spotify» (solo lectura, sin modificarlo) y explicó qué información contiene: horas escuchadas por mes (oct 2025 – oct 2026), escuchas por hora del día, top de artistas y canciones, podcasts, biblioteca y playlists, búsquedas, Wrapped 2025, gustos y segmentos publicitarios de Spotify, Sound Capsule y una sección de otros archivos. Los datos personales (Identity, UserAttributes, UserAddress, Identifiers, Payments) están marcados como excluidos de cualquier gráfico.
+- **Motivo:** Que el usuario tenga clara la información que contiene su archivo de Figma antes de usarla en la web.
+- **Archivos afectados:** `project-definition/LOG.md`. El archivo de Figma no se ha modificado.
+- **Estado:** completado. Pendiente: comprobar las cifras contra los CSV originales antes de usarlas en la web o en una entrega.
+
+## 2026-11-17 — Respuesta del asistente sobre de qué trata la web
+- **Decisión/cambio:** Se registra la respuesta dada por el asistente a la pregunta «¿de qué trata mi página web?», según `CONTEXT.md`: es una página personal con tus datos de Spotify, con tres partes: estadísticas musicales (artistas más escuchados, tipos de música, etc.), salud auditiva (cómo afecta la música a los oídos, según los datos recopilados) y calculadora auditiva (el visitante indica su tiempo de escucha semanal y el tipo de auriculares que más usa, y obtiene una estimación de su salud auditiva). Público: jóvenes de 18 a 30 años.
+- **Corrección:** la respuesta original decía que la pregunta de investigación no estaba definida. Ya está confirmada: «¿Cómo está mi salud auditiva durante un año entero?». Quedan pendientes el concepto visual y las páginas finales.
+- **Motivo:** Dejar constancia de la descripción del proyecto tal como la dio el asistente.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado.
+
+## 2026-11-17 — Prueba: descripción del proyecto
+- **Decisión/cambio:** Se hace una prueba para comprobar que el asistente entiende el proyecto. La descripción registrada es: web personal con los datos de Spotify, con tres partes: estadísticas musicales (artistas más escuchados, tipos de música), salud auditiva (cómo afecta la música a los oídos, según los datos recopilados) y calculadora auditiva (el visitante indica su tiempo de escucha semanal y el tipo de auriculares que más usa, y obtiene una estimación de su salud auditiva). Público: jóvenes de 18 a 30 años.
+- **Motivo:** Comprobar que el asistente describe el proyecto igual que `CONTEXT.md`.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado. La pregunta de investigación ya está confirmada (ver entrada del mismo día), así que queda pendiente solo el concepto visual y las páginas finales.
+
 ## 2026-11-17 — Normas de trabajo para Claude y ChatGPT
 - **Decisión/cambio:** Claude lee `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` al empezar cada sesión de trabajo en el repositorio, y aplica `INSTRUCTIONS.md` en todo momento. Esto incluye no subir cambios ni tocar `main` sin que el usuario lo pida, explicar antes de implementar código y registrar las decisiones relevantes en `LOG.md`.
 - **Motivo:** Que el trabajo con Claude siga las mismas reglas que el asistente de ChatGPT, y que no dependa de recordarlas en cada conversación.
