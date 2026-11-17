@@ -3,35 +3,33 @@
 ## Identificación
 - Proyecto: Proyecto Web Elisava
 - Repositorio: `mario2005junior-star/Proyecto_Web_Elisava_Mario`
-- Rama principal identificada: `main`
-- Idioma inicial del documento HTML: español (`lang="es"`)
+- Rama principal: `main`
+- Idioma del documento HTML: español (`lang="es"`)
 
-## Estado conocido al crear estos documentos
-La raíz del repositorio contiene:
-- `index.html`
-- `style.css`
-- `script.js`
-- `README.md`
+## Asignatura
+- Ejercicio: «Configurar la IA» (Elisava).
+- Pasos del ejercicio: crear estos documentos en el proyecto, subirlos a GitHub, trabajar con ChatGPT y comprobar cómo ajusta o completa los archivos, experimentar en el proyecto y compartirlo con dpaladinia@elisava.net.
 
-La página HTML inicial incluye:
-- Un título de pestaña genérico: «proyecto».
-- Un encabezado «Mi vida».
-- Un texto provisional: «Una frase que explica de qué trata».
-- Un botón «Ver mi pregunta».
-- Un párrafo oculto con el texto provisional «Aquí va mi pregunta de investigación».
+## Tema del proyecto
+Página web personal con los datos de Spotify del usuario, con distintos datos y visualizaciones. Incluye:
+- Un resumen de sus datos: artistas más escuchados, tipo de música, entre otros.
+- Un apartado de salud auditiva que explica cómo afecta la música a los oídos, según la información recopilada.
+- Una calculadora en la que el visitante introduce su tiempo de escucha semanal (que puede consultar en Spotify) y el tipo de auriculares que usa más, y obtiene una estimación de su salud auditiva.
 
-El JavaScript muestra u oculta ese párrafo al pulsar el botón. El CSS contiene estilos básicos para el cuerpo, el encabezado y el botón.
+## Público
+Jóvenes de 18 a 30 años.
 
-## Información pendiente de confirmar
-No se debe inventar ni dar por establecido:
-- El tema definitivo de la web. El tema de la web es el siguiente: es una página web donde habrá mis datos personales de Spotify, con distintos datos y distintas visualizaciones. Además de la visualización de mis datos personales, también habrá un apartado sobre la salud auditiva, en el que se explicará cómo afecta a los oídos según toda la información que he recopilado. Asimismo, habrá una calculadora en la que el usuario que entre en la página podrá ver cuál será su salud auditiva. Deberá introducir su tiempo de escucha semanal, que puede consultar en Spotify, y también el tipo de auriculares con los que escucha más a menudo, para que la estimación sea más precisa.
-- La pregunta de investigación. Mi página web trata de un resumen de todos los datos míos personales de Spotify, que esto engloba a cantantes que más he escuchado, qué tipo de música escucho, entre más datos. Además, para que no sea solamente una comparación de datos, un análisis de mi impacto auditivo, ya que seguramente no será muy saludable escuchar mucha música seguidamente, es una forma de concienciar o tener en cuenta, además, que la gente pueda también saber su estado auditivo. 
-- El público al que se dirige.  El público al que va dirigido es para gente joven de 18 a 30 años, ya que es el público que más escucha música y que más le puede interesar la salud auditiva.
-- El concepto, narrativa y dirección visual. (sin concretar todavia)
-- Los requisitos concretos de la asignatura y los criterios de evaluación.
-- Las páginas, secciones o funcionalidades finales. (sin concretar todavia)
+## Estado conocido del repositorio
+La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Son todavía la plantilla inicial:
+- Título de pestaña genérico: «proyecto».
+- Encabezado «Mi vida» y texto provisional «Una frase que explica de qué trata».
+- Botón «Ver mi pregunta» que muestra un párrafo oculto con el texto provisional «Aquí va mi pregunta de investigación».
 
-Añade aquí la información confirmada cuando el usuario la proporcione.
+## Pendiente de confirmar
+No inventar ni dar por establecido:
+- La pregunta de investigación definitiva.
+- El concepto, la narrativa y la dirección visual.
+- Las páginas, secciones y funcionalidades finales.
+- Los requisitos concretos de la asignatura y sus criterios de evaluación.
 
-## Principio de contexto
-Este archivo es una referencia viva. Actualízalo cuando se acuerden datos estructurales del proyecto. No conviertas ideas tentativas en decisiones definitivas sin confirmación.
+Este archivo es una referencia viva. Añade la información confirmada cuando el usuario la aporte, y no conviertas ideas tentativas en decisiones definitivas sin confirmación.

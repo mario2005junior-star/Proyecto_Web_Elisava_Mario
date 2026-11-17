@@ -1,12 +1,17 @@
 # LOG — Registro del proyecto
 
-Este archivo registra decisiones confirmadas, cambios relevantes, problemas y soluciones. Mantén las entradas cronológicas, con la más reciente arriba.
+Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
+
+## 2026-11-17 — Adaptación de la documentación al ejercicio «Configurar la IA»
+- **Decisión/cambio:** Se reorganiza `project-definition/` en cuatro documentos: `SOUL.md` (personalidad), `CONTEXT.md` (contexto), `INSTRUCTIONS.md` (instrucciones, flujo y criterios) y `LOG.md` (registro). Se fusionan los antiguos `SKILL`, `WORKFLOW`, `CRITERIA` y `GOALS` en `INSTRUCTIONS.md`.
+- **Motivo:** Adaptarse a la estructura pedida en el ejercicio de la asignatura.
+- **Archivos afectados:** `project-definition/` (eliminados los archivos antiguos y creados los nuevos).
+- **Estado:** completado en rama `claude/adaptar-docs-ejercicio-ia`, pendiente de revisión y de subida.
 
 ## 2026-11-04 — Creación de la documentación de definición
 - Se acuerda organizar las instrucciones del asistente en documentos Markdown independientes.
-- Se crean los archivos iniciales de personalidad, contexto, criterios, objetivos, flujo de trabajo y activación.
 - Se documenta el estado inicial conocido de `index.html`, `style.css` y `script.js`.
-- Pendiente: confirmar el tema, la pregunta de investigación, los requisitos docentes y la dirección visual definitiva.
+- **Estado:** completado (la documentación se ha reorganizado el 2026-11-17).
 
 ## Plantilla para futuras entradas
 ### AAAA-MM-DD — Título breve
