@@ -27,6 +27,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `project-definition/LOG.md`.
 - **Estado:** completado. La pregunta de investigación ya está confirmada (ver entrada del mismo día), así que queda pendiente solo el concepto visual y las páginas finales.
 
+## 2026-11-17 — Regla de subida: todo a main, registrado en LOG.md
+- **Decisión/cambio:** Todo lo que se suba al repositorio se hace en `main`, y los cambios relevantes se registran en `project-definition/LOG.md` de `main`. No se usan otras ramas para guardar trabajo, salvo cuando el usuario lo pide para revisar algo antes de fusionar.
+- **Motivo:** El usuario quiere que todo esté en un único sitio y que no queden ramas sueltas con trabajo.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado.
+
 ## 2026-11-17 — Normas de trabajo para Claude y ChatGPT
 - **Decisión/cambio:** Claude lee `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md` al empezar cada sesión de trabajo en el repositorio, y aplica `INSTRUCTIONS.md` en todo momento. Esto incluye no subir cambios ni tocar `main` sin que el usuario lo pida, explicar antes de implementar código y registrar las decisiones relevantes en `LOG.md`.
 - **Motivo:** Que el trabajo con Claude siga las mismas reglas que el asistente de ChatGPT, y que no dependa de recordarlas en cada conversación.
