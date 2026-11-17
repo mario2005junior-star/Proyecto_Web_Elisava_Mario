@@ -8,6 +8,13 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
 - **Estado:** completado en rama `claude/pregunta-investigacion`, pendiente de fusionar.
 
+## 2026-11-17 — Respuesta del asistente sobre de qué trata la web
+- **Decisión/cambio:** Se registra la respuesta dada por el asistente a la pregunta «¿de qué trata mi página web?», según `CONTEXT.md`: es una página personal con tus datos de Spotify, con tres partes: estadísticas musicales (artistas más escuchados, tipos de música, etc.), salud auditiva (cómo afecta la música a los oídos, según los datos recopilados) y calculadora auditiva (el visitante indica su tiempo de escucha semanal y el tipo de auriculares que más usa, y obtiene una estimación de su salud auditiva). Público: jóvenes de 18 a 30 años.
+- **Corrección:** la respuesta original decía que la pregunta de investigación no estaba definida. Ya está confirmada: «¿Cómo está mi salud auditiva durante un año entero?». Quedan pendientes el concepto visual y las páginas finales.
+- **Motivo:** Dejar constancia de la descripción del proyecto tal como la dio el asistente.
+- **Archivos afectados:** `project-definition/LOG.md`.
+- **Estado:** completado.
+
 ## 2026-11-17 — Prueba: descripción del proyecto
 - **Decisión/cambio:** Se hace una prueba para comprobar que el asistente entiende el proyecto. La descripción registrada es: web personal con los datos de Spotify, con tres partes: estadísticas musicales (artistas más escuchados, tipos de música), salud auditiva (cómo afecta la música a los oídos, según los datos recopilados) y calculadora auditiva (el visitante indica su tiempo de escucha semanal y el tipo de auriculares que más usa, y obtiene una estimación de su salud auditiva). Público: jóvenes de 18 a 30 años.
 - **Motivo:** Comprobar que el asistente describe el proyecto igual que `CONTEXT.md`.
