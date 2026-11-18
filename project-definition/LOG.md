@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-18 — Adaptación de la web a la plantilla de Figma
+- **Decisión/cambio:** Se lee en solo lectura la plantilla de Figma «Sin título» (archivo `NsUf02LQ9xSW908aCEPFfy`, página 1). Es un boceto de estructura, sin textos ni colores, con 13 pantallas: inicio, explicación, historial (tres partes), estadística, podcasts y biblioteca, búsquedas y Wrapped, publicidad, Sound Capsule, audición, calculadora, comparativa y una barra de secciones arriba con una barra de pie abajo. El usuario elige aplicar estructura y estilo: se reorganiza la web publicada (versión 15) en ese orden, con barra de secciones y barra de pie. Audición, calculadora y comparativa quedan como pendientes porque aún no tienen contenido. La barra de pie usa «Elisava · Configurar la IA» como texto provisional.
+- **Motivo:** Que la web siga la plantilla que el usuario ha diseñado en Figma.
+- **Archivos afectados:** la página publicada de Spotify (artefacto `81dca5e1-2758-4584-8f11-e9e10e03afba`). El archivo de Figma no se ha modificado.
+- **Estado:** completado en la página publicada. Pendiente: revisar la página en móvil y escritorio, y definir el contenido de audición, calculadora y comparativa.
+
 ## 2026-11-17 — Pregunta de investigación confirmada
 - **Decisión/cambio:** La pregunta de investigación queda confirmada: «¿Cómo está mi salud auditiva durante un año entero?». Se registra en `CONTEXT.md` y se marca como completada en `INSTRUCTIONS.md`.
 - **Motivo:** Es la pregunta que el usuario ha decidido para la web.
@@ -26,12 +32,6 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Motivo:** Comprobar que el asistente describe el proyecto igual que `CONTEXT.md`.
 - **Archivos afectados:** `project-definition/LOG.md`.
 - **Estado:** completado. La pregunta de investigación ya está confirmada (ver entrada del mismo día), así que queda pendiente solo el concepto visual y las páginas finales.
-
-## 2026-11-18 — Adaptación de la web a la plantilla de Figma
-- **Decisión/cambio:** Se lee en solo lectura la plantilla de Figma «Sin título» (archivo `NsUf02LQ9xSW908aCEPFfy`, página 1). Es un boceto de estructura, sin textos ni colores, con 13 pantallas: inicio, explicación, historial (tres partes), estadística, podcasts y biblioteca, búsquedas y Wrapped, publicidad, Sound Capsule, audición, calculadora, comparativa y una barra de secciones arriba con una barra de pie abajo. El usuario elige aplicar estructura y estilo: se reorganiza la web publicada (versión 15) en ese orden, con barra de secciones y barra de pie. Audición, calculadora y comparativa quedan como pendientes porque aún no tienen contenido. La barra de pie usa «Elisava · Configurar la IA» como texto provisional.
-- **Motivo:** Que la web siga la plantilla que el usuario ha diseñado en Figma.
-- **Archivos afectados:** la página publicada de Spotify (artefacto `81dca5e1-2758-4584-8f11-e9e10e03afba`). El archivo de Figma no se ha modificado.
-- **Estado:** completado en la página publicada. Pendiente: revisar la página en móvil y escritorio, y definir el contenido de audición, calculadora y comparativa.
 
 ## 2026-11-17 — Regla de subida: todo a main, registrado en LOG.md
 - **Decisión/cambio:** Todo lo que se suba al repositorio se hace en `main`, y los cambios relevantes se registran en `project-definition/LOG.md` de `main`. No se usan otras ramas para guardar trabajo, salvo cuando el usuario lo pide para revisar algo antes de fusionar.
