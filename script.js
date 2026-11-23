@@ -236,7 +236,7 @@ function iniciaLoops() {
   historial.classList.add("anima");
   const observador = new IntersectionObserver(
     ([entrada]) => historial.classList.toggle("en-vista", entrada.isIntersecting),
-    { threshold: 0.25 }
+    { threshold: 0 }
   );
   observador.observe(historial);
 

@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-23 — Corrección de las barras de Historial
+- **Decisión/cambio:** Las barras de Historial aparecían vacías porque el bloque es muy alto y el loop exigía que se viera al menos el 25 % del bloque. Se cambia el umbral a 0: las barras crecen en cuanto cualquier parte del bloque entra en pantalla.
+- **Motivo:** Que se vea la barra llena según las horas de cada mes.
+- **Archivos afectados:** `script.js`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`.
+
 ## 2026-11-23 — Dos loops de scroll en la web
 - **Decisión/cambio:** Se añaden dos loops, que se repiten al hacer scroll. Loop 1: las barras de Historial crecen al entrar en pantalla y vuelven a 0 al salir. Loop 2: la gráfica de evolución de artistas se dibuja según avanza el scroll y se borra al subir. Con movimiento reducido no se aplica ninguno. La elección de estos dos es del asistente, porque la definición de «loop» del curso no estaba clara.
 - **Motivo:** La entrega pide una ficha por cada scroll trabajado, con un mínimo de dos.
