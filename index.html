@@ -3,17 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> proyecto</title>
+  <title>Mis datos de Spotify y mi salud auditiva</title>
   <!-- El nombre tiene que coincidir con el del archivo: style.css -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Mi vida</h1>
-  <p>Una frase que explica de qué trata.</p>
+  <header class="cabecera">
+    <a class="logo" href="#intro">Mis datos de Spotify</a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#intro" data-sec="intro">1 Introducción</a>
+      <a href="#referentes" data-sec="referentes">2 Referentes</a>
+      <a href="#datos" data-sec="datos">3 Datos</a>
+      <a href="#salud" data-sec="salud">4 Salud</a>
+      <a href="#conclusion" data-sec="conclusion">5 Conclusión</a>
+      <a href="#trabajo" data-sec="trabajo">6 Trabajo hecho en clase</a>
+    </nav>
+  </header>
 
-  <button id="boton">Ver mi pregunta</button>
-  <p id="texto" hidden>Aquí va mi pregunta de investigación.</p>
+  <main>
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="intro" class="seccion" aria-labelledby="t-intro">
+      <h1 class="titular" id="t-intro">Mis datos de Spotify</h1>
+      <p class="entradilla">Una web personal con mis datos de escucha de Spotify y un apartado sobre mi salud auditiva.</p>
+      <p class="pregunta"><strong>Pregunta de investigación:</strong> ¿Cómo está mi salud auditiva durante un año entero?</p>
+      <p>Público: jóvenes de 18 a 30 años.</p>
+    </section>
+
+    <!-- 2. REFERENTES -->
+    <section id="referentes" class="seccion" aria-labelledby="t-ref" hidden>
+      <h2 class="titular" id="t-ref">Referentes</h2>
+      <p class="pendiente">Pendiente: añadir los referentes de la memoria (Figma, sección 2) con su enlace y lo que aporta cada uno.</p>
+    </section>
+
+    <!-- 3. DATOS -->
+    <section id="datos" class="seccion" aria-labelledby="t-datos" hidden>
+      <h2 class="titular" id="t-datos">Datos</h2>
+
+      <article class="bloque" id="historial">
+        <h3>Historial de escucha</h3>
+        <p>Horas escuchadas por mes (oct 2025 – oct 2026). Horas = msPlayed / 3.600.000.</p>
+        <div id="horas-mes" class="barras"></div>
+
+        <h4>Artistas más escuchados (horas)</h4>
+        <div id="top-artistas" class="barras"></div>
+
+        <h4>Canciones más reproducidas</h4>
+        <ol id="top-canciones" class="ranking"></ol>
+      </article>
+
+      <article class="bloque" id="detalle">
+        <h3>Detalle por mes</h3>
+        <label for="mes">Mes:</label>
+        <select id="mes"></select>
+        <div class="tarjetas">
+          <div class="tarjeta"><span id="mes-horas" class="cifra"></span><span>Horas escuchadas</span></div>
+          <div class="tarjeta"><span id="mes-plays" class="cifra"></span><span>Reproducciones</span></div>
+        </div>
+        <h4>Artistas top del mes</h4>
+        <div id="mes-artistas" class="barras"></div>
+        <h4>Canciones top del mes</h4>
+        <table class="tabla">
+          <thead><tr><th>Canción</th><th>Artista</th><th>Reproducciones</th></tr></thead>
+          <tbody id="mes-canciones"></tbody>
+        </table>
+      </article>
+
+      <article class="bloque" id="evolucion">
+        <h3>Evolución de artistas</h3>
+        <p>Reproducciones por mes de los 6 artistas más escuchados del año.</p>
+        <svg id="grafica-evolucion" viewBox="0 0 800 340" role="img" aria-label="Evolución mensual de seis artistas"></svg>
+        <ul id="leyenda-evolucion" class="leyenda"></ul>
+      </article>
+
+      <article class="bloque" id="podcasts">
+        <h3>Podcasts, biblioteca y playlists</h3>
+        <h4>Podcasts escuchados (episodios)</h4>
+        <div id="podcasts-barras" class="barras"></div>
+        <h4>Tu biblioteca guardada</h4>
+        <div id="biblioteca-barras" class="barras"></div>
+        <h4>Playlists con más canciones</h4>
+        <div id="playlists-barras" class="barras"></div>
+      </article>
+
+      <article class="bloque" id="busquedas">
+        <h3>Búsquedas y Wrapped 2025</h3>
+        <h4>Búsquedas por mes</h4>
+        <div id="busquedas-barras" class="barras"></div>
+        <h4>Wrapped 2025 en cifras</h4>
+        <div id="wrapped" class="tarjetas"></div>
+      </article>
+
+      <article class="bloque" id="publicidad">
+        <h3>Publicidad</h3>
+        <h4>Gustos inferidos por Spotify (segmentos)</h4>
+        <div id="inferencias-barras" class="barras"></div>
+        <h4>Segmentos de oyente (Marquee)</h4>
+        <div id="marquee-barras" class="barras"></div>
+      </article>
+
+      <article class="bloque" id="sound-capsule">
+        <h3>Sound Capsule</h3>
+        <h4>Horas por semana</h4>
+        <div id="capsule-semanas" class="barras"></div>
+        <h4>Artistas con más horas</h4>
+        <div id="capsule-artistas" class="barras"></div>
+      </article>
+
+      <article class="bloque" id="otros">
+        <h3>Otros archivos</h3>
+        <p class="pendiente">Pendiente: contenido de este apartado.</p>
+      </article>
+    </section>
+
+    <!-- 4. SALUD AUDITIVA -->
+    <section id="salud" class="seccion" aria-labelledby="t-salud" hidden>
+      <h2 class="titular" id="t-salud">Salud</h2>
+      <p class="pendiente">Pendiente: explicación de cómo afecta la música a los oídos, según los datos recopilados.</p>
+    </section>
+
+    <!-- 5. CONCLUSIÓN -->
+    <section id="conclusion" class="seccion" aria-labelledby="t-concl" hidden>
+      <h2 class="titular" id="t-concl">Conclusión</h2>
+      <p class="pendiente">Pendiente: conclusiones, cuando tengamos los resultados.</p>
+    </section>
+
+    <!-- 6. TRABAJO HECHO EN CLASE -->
+    <section id="trabajo" class="seccion" aria-labelledby="t-trabajo" hidden>
+      <h2 class="titular" id="t-trabajo">Trabajo hecho en clase</h2>
+      <p class="pendiente">Pendiente: texto sobre el trabajo hecho en clase.</p>
+    </section>
+
+  </main>
+
+  <footer class="pie">Elisava · Configurar la IA · MJ</footer>
 
   <!-- El JavaScript va al final, cuando la página ya está cargada -->
   <script src="script.js"></script>

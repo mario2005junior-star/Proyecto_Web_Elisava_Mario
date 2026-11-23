@@ -20,10 +20,12 @@ Página web personal con los datos de Spotify del usuario, con distintos datos y
 Jóvenes de 18 a 30 años.
 
 ## Estado conocido del repositorio
-La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Son todavía la plantilla inicial:
-- Título de pestaña genérico: «proyecto».
-- Encabezado «Mi vida» y texto provisional «Una frase que explica de qué trata».
-- Botón «Ver mi pregunta» que muestra un párrafo oculto con el texto provisional «Aquí va mi pregunta de investigación».
+La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Versión V1 de la web:
+- `index.html` tiene seis secciones con el mismo orden que la memoria: 1 Introducción, 2 Referentes, 3 Datos, 4 Salud, 5 Conclusión y 6 Trabajo hecho en clase. Salud, Conclusión y Trabajo hecho en clase están pendientes de contenido.
+- `style.css` usa la paleta de la referencia visual (fondo crema, rojos, rosas y amarillo) y es responsive.
+- `script.js` contiene los datos de Spotify ya extraídos (historial, detalle por mes de 13 meses, evolución de artistas, podcasts, biblioteca, playlists, búsquedas, Wrapped, publicidad, Sound Capsule). Los datos están fijos en el código, no se actualizan solos.
+- El gráfico de horas por hora del día no está incluido en esta versión.
+- Pendiente: publicar en GitHub Pages (Settings → Páginas, rama `main`) y apuntar la URL resultante en la entrega.
 
 ## Pregunta de investigación
 «¿Cómo está mi salud auditiva durante un año entero?»
