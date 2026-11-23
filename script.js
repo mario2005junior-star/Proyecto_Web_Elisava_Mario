@@ -226,9 +226,45 @@ function inicioNavegacion() {
   muestraSeccion(location.hash.slice(1) || "intro");
 }
 
+// ---------- Loops de scroll ----------
+function iniciaLoops() {
+  // Con movimiento reducido no se animan las barras ni la gráfica
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  // Loop 1: las barras de Historial crecen al entrar en pantalla y vuelven a 0 al salir
+  const historial = $("#historial");
+  historial.classList.add("anima");
+  const observador = new IntersectionObserver(
+    ([entrada]) => historial.classList.toggle("en-vista", entrada.isIntersecting),
+    { threshold: 0.25 }
+  );
+  observador.observe(historial);
+
+  // Loop 2: la gráfica de evolución se dibuja según el scroll y se borra al subir
+  const seccion = $("#evolucion");
+  const trazos = $("#grafica-evolucion").querySelectorAll("path");
+  trazos.forEach(p => {
+    p.setAttribute("pathLength", "1");
+    p.style.strokeDasharray = "1";
+    p.style.strokeDashoffset = "1";
+  });
+  let pendiente = false;
+  const dibuja = () => {
+    pendiente = false;
+    const r = seccion.getBoundingClientRect();
+    const avance = Math.min(1, Math.max(0, (window.innerHeight - r.top) / (r.height + window.innerHeight)));
+    trazos.forEach(p => { p.style.strokeDashoffset = (1 - avance).toFixed(3); });
+  };
+  window.addEventListener("scroll", () => {
+    if (!pendiente) { pendiente = true; requestAnimationFrame(dibuja); }
+  }, { passive: true });
+  dibuja();
+}
+
 // ---------- Arranque ----------
 pintaHistorial();
 pintaSelectorMes();
 pintaEvolucion();
 pintaResto();
 inicioNavegacion();
+iniciaLoops();

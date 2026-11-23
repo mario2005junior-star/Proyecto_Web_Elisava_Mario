@@ -242,6 +242,10 @@ select {
   font-size: 14px;
 }
 
+/* Loop de Historial: las barras se vacían al salir de pantalla y vuelven a crecer al entrar */
+.bloque.anima .relleno { transition: width 0.6s ease; }
+.bloque.anima:not(.en-vista) .relleno { width: 0 !important; }
+
 /* Móvil */
 @media (max-width: 640px) {
   .cabecera,

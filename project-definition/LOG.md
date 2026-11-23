@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-23 — Dos loops de scroll en la web
+- **Decisión/cambio:** Se añaden dos loops, que se repiten al hacer scroll. Loop 1: las barras de Historial crecen al entrar en pantalla y vuelven a 0 al salir. Loop 2: la gráfica de evolución de artistas se dibuja según avanza el scroll y se borra al subir. Con movimiento reducido no se aplica ninguno. La elección de estos dos es del asistente, porque la definición de «loop» del curso no estaba clara.
+- **Motivo:** La entrega pide una ficha por cada scroll trabajado, con un mínimo de dos.
+- **Archivos afectados:** `script.js`, `style.css`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: confirmar con el profesor el criterio de «loop» y escribir las fichas.
+
 ## 2026-11-23 — Web V1 en el repositorio
 - **Decisión/cambio:** Se construye la web V1 en el repositorio (`index.html`, `style.css`, `script.js`) con la paleta de la referencia visual (crema, rojos, rosas y amarillo), titulares grandes y condensados, y las seis secciones de la memoria (1 Introducción, 2 Referentes, 3 Datos, 4 Salud, 5 Conclusión, 6 Trabajo hecho en clase) con navegación entre ellas. En Datos se muestran los datos de Spotify ya extraídos: historial (horas por mes, top de artistas y canciones), detalle por mes de 13 meses con selector, evolución de los 6 artistas principales en un gráfico SVG, podcasts, biblioteca, playlists, búsquedas, Wrapped 2025, publicidad, Sound Capsule. Los datos van fijos en `script.js`. `CONTEXT.md` describe la V1.
 - **Motivo:** Cumplir el requisito de la entrega del 25.11.26 de tener una versión V1 de la web en GitHub.
