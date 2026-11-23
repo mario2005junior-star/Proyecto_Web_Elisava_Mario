@@ -2,6 +2,13 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-23 — Estado de la web: resumen de lo hablado
+- **Decisión/cambio:** Se publica la web V1 en GitHub Pages, en https://mario2005junior-star.github.io/Proyecto_Web_Elisava_Mario/ (Settings → Pages, rama `main`, carpeta `/ (root)`). La web tiene seis secciones (Introducción, Referentes, Datos, Salud, Conclusión y Trabajo hecho en clase) con navegación entre ellas, y usa la paleta de la referencia visual. En Datos se muestran los datos de Spotify ya extraídos (historial, detalle por mes, evolución de artistas, podcasts, biblioteca, playlists, búsquedas, Wrapped, publicidad y Sound Capsule). Se añaden dos loops de scroll: las barras de Historial crecen al entrar en pantalla y se vacían al salir, y la gráfica de evolución se dibuja según avanza el scroll. El umbral del loop de Historial se corrige a 0 para que las barras se vean llenas.
+- **Motivo:** Cumplir el requisito de la entrega del 25.11.26 (versión V1 publicada y loops de scroll). El criterio de «loop» del curso no estaba claro: la definición encontrada en internet era general, así que se eligieron los dos efectos de scroll con el criterio de «efecto que se repite al hacer scroll».
+- **Correcciones:** se quitan de la web referentes, enlaces, textos de «Trabajo hecho en clase» y de «Otros archivos» que no salían del material. Los datos mensuales se verifican contra las tablas de Spotify.
+- **Archivos afectados:** `index.html`, `style.css`, `script.js`, `project-definition/CONTEXT.md`, `project-definition/LOG.md`.
+- **Estado:** web publicada. Pendiente: (a) confirmar con el profesor el criterio de «loop» y definir las fichas del loop (mínimo dos, una por cada scroll trabajado); (b) añadir los referentes desde la memoria de Figma con su enlace; (c) escribir el contenido de Salud, Conclusión, Trabajo hecho en clase y Otros archivos; (d) actualizar `SOUL.md` e `INSTRUCTIONS.md`; (e) gráfico de horas por hora del día sin incluir.
+
 ## 2026-11-23 — Corrección de las barras de Historial
 - **Decisión/cambio:** Las barras de Historial aparecían vacías porque el bloque es muy alto y el loop exigía que se viera al menos el 25 % del bloque. Se cambia el umbral a 0: las barras crecen en cuanto cualquier parte del bloque entra en pantalla.
 - **Motivo:** Que se vea la barra llena según las horas de cada mes.
