@@ -2,6 +2,11 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Nombre completo en el pie
+- **Cambio:** El pie de la web muestra «Mario Fernandes» en lugar de «MJ».
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** subido a `main`.
+
 ## 2026-11-24 — Resumen del día: web V1 y datos
 - **Qué se hizo:** referentes (ocho capturas, enlaces y lo que se lleva de cada uno, desde las notas de Figma en solo lectura); Datos con barras y números que se construyen al entrar en pantalla; definición de qué cuenta cada punto de la gráfica de evolución; sección Conclusión con datos, cálculo de dB y texto personal; se quitó «Trabajo hecho en clase»; referencia visual de paleta y tipografía en el repositorio; revisión visual y accesibilidad marcada como hecha.
 - **Commits subidos a `main` hoy:** `1f991ae`, `2949bba`, `b137496`, `3189375`, `befde1d`, `d218759`, `4014436`, `fb6867a`, `77777bb`, `8012895`, `04b7948`, `596fb57`, `788b1b4`, `593620f`, `558de2f`, `1c75ec4`, `db90836`, `bd322b6`, `2074ac6`, `0f7fe6b`, `39e075c`, `25d9f8e`, `33c00c1`, `0f4e336`.
