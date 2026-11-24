@@ -95,7 +95,7 @@ function pintaBarras(contenedor, filas, unidad = "", animar = false) {
     fila.innerHTML =
       `<span class="etiqueta"></span>` +
       `<span class="pista"><span class="relleno" data-ancho="${ancho}" style="width:${animar ? 0 : ancho}%"></span></span>` +
-      `<span class="valor">${formatea(valor)}${unidad}</span>`;
+      `<span class="valor" data-num="${valor}" data-unidad="${unidad}">${formatea(valor)}${unidad}</span>`;
     fila.querySelector(".etiqueta").textContent = etiqueta;
     contenedor.appendChild(fila);
   }
@@ -126,8 +126,14 @@ function pintaHistorial() {
 // ---------- Detalle por mes ----------
 function pintaMes(i, animar = false) {
   const m = MESES[i];
-  $("#mes-horas").textContent = formatea(m.horas);
-  $("#mes-plays").textContent = m.plays;
+  const cifras = [["#mes-horas", m.horas], ["#mes-plays", m.plays]];
+  for (const [sel, valor] of cifras) {
+    const el = $(sel);
+    el.dataset.num = valor;
+    el.dataset.unidad = "";
+    if (animar) { el.textContent = formatea(0); cuentaHasta(el, valor, ""); }
+    else el.textContent = formatea(valor);
+  }
   pintaBarras($("#mes-artistas"), m.artistas, "", animar);
   const tbody = $("#mes-canciones");
   tbody.innerHTML = "";
@@ -247,19 +253,48 @@ function inicioNavegacion() {
   muestraSeccion(location.hash.slice(1) || "intro");
 }
 
+// ---------- Números que suben ----------
+function cuentaHasta(el, final, unidad, ms = 1000) {
+  const inicio = performance.now();
+  const paso = t => {
+    const p = Math.min((t - inicio) / ms, 1);
+    const v = final * (1 - Math.pow(1 - p, 3));
+    el.textContent = (Number.isInteger(final) ? String(Math.round(v)) : v.toFixed(1).replace(".", ",")) + unidad;
+    if (p < 1) requestAnimationFrame(paso);
+  };
+  requestAnimationFrame(paso);
+}
+
+// Al entrar en un bloque: las barras crecen en cascada y los números suben desde 0.
+// Al salir: todo vuelve a 0 para volver a construirse la próxima vez.
+function animaBloque(bloque, dentro) {
+  bloque.classList.toggle("en-vista", dentro);
+  bloque.querySelectorAll(".barras").forEach(c =>
+    c.querySelectorAll(".relleno").forEach((r, i) => {
+      r.style.transitionDelay = dentro ? `${i * 0.06}s` : "0s";
+    })
+  );
+  bloque.querySelectorAll("[data-num]").forEach(el => {
+    const unidad = el.dataset.unidad || "";
+    if (dentro) cuentaHasta(el, Number(el.dataset.num), unidad);
+    else el.textContent = formatea(0) + unidad;
+  });
+}
+
 // ---------- Loops de scroll ----------
 function iniciaLoops() {
   // Con movimiento reducido no se animan las barras ni la gráfica
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  // Loop 1: las barras de Historial crecen al entrar en pantalla y vuelven a 0 al salir
-  const historial = $("#historial");
-  historial.classList.add("anima");
-  const observador = new IntersectionObserver(
-    ([entrada]) => historial.classList.toggle("en-vista", entrada.isIntersecting),
-    { threshold: 0 }
-  );
-  observador.observe(historial);
+  // Loop 1: todos los bloques de Datos construyen sus barras y números al entrar en pantalla
+  document.querySelectorAll("#datos .bloque").forEach(bloque => {
+    bloque.classList.add("anima");
+    const observador = new IntersectionObserver(
+      ([entrada]) => animaBloque(bloque, entrada.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observador.observe(bloque);
+  });
 
   // Loop 2: la gráfica de evolución se dibuja sola al entrar en pantalla y se borra al salir
   const grafica = $("#grafica-evolucion");
@@ -273,11 +308,6 @@ function iniciaLoops() {
   }, { threshold: 0.3 });
   observadorGrafica.observe(grafica);
 
-  // Loop 3: las barras de artistas del mes se construyen al entrar en el apartado
-  const observadorDetalle = new IntersectionObserver(([entrada]) => {
-    if (entrada.isIntersecting) pintaMes(Number($("#mes").value), true);
-  }, { threshold: 0.2 });
-  observadorDetalle.observe($("#detalle"));
 }
 
 // ---------- Arranque ----------

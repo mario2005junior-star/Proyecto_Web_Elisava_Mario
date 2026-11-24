@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Datos se construye al entrar en pantalla
+- **Cambio:** Todos los bloques de Datos (historial, detalle por mes, podcasts, búsquedas, publicidad, Sound Capsule) construyen sus barras en cascada y sus números suben desde 0 al entrar en pantalla, y vuelven a 0 al salir. El detalle por mes también cuenta sus cifras al cambiar de mes.
+- **Motivo:** Pedido del usuario: que la sección se vaya construyendo mientras se hace scroll.
+- **Archivos afectados:** `script.js`, `index.html` (versión `script.js?v=3`), `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`. Las tarjetas de Wrapped no cuentan, porque sus valores son texto y no números.
+
 ## 2026-11-24 — Referentes en la web
 - **Cambio:** La sección Referentes muestra las ocho capturas de `img/referentes/`, con su enlace y lo que el usuario se lleva de cada uno (texto de las notas «¿Qué me llevo?» del archivo de Figma, solo lectura).
 - **Corrección:** Las primeras descripciones que añadí no salían del archivo (solo había leído nombres y enlaces). Se han sustituido por las notas reales.
