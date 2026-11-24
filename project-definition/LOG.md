@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Versión de CSS y JS para evitar la caché
+- **Decisión/cambio:** Tras el despliegue, la web publicada seguía mostrando las barras vacías. En local la corrección funciona, así que se trata de caché del CSS y del JS. Se añade `?v=2` a los enlaces de `style.css` y `script.js` para forzar la versión nueva.
+- **Motivo:** Que la web publicada muestre las barras llenas.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: comprobar en la web publicada.
+
 ## 2026-11-24 — Corrección del relleno de las barras
 - **Decisión/cambio:** Las barras de todos los apartados aparecían vacías porque `.pista` y `.relleno` son elementos en línea, y en línea no admiten altura ni ancho. Se hacen bloques (`display: block`). La corrección del umbral del 23 de noviembre no era la causa real.
 - **Motivo:** Que se vea la barra llena según el valor de cada fila.
