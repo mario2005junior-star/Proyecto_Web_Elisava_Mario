@@ -19,6 +19,8 @@ Código: `script.js` (funciones `iniciaLoops`) y `style.css` (bloque «Loop de H
 | Estado inicial | `.bloque.anima:not(.en-vista) .relleno { width: 0 }`. |
 | Estado final | Ancho en % según el valor máximo del listado (`pintaBarras`). |
 | Desactivado con | `prefers-reduced-motion: reduce`. Las barras se muestran llenas sin animación. |
+| Dónde decide el usuario | Nivel de visibilidad del disparador, duración de la animación (0,6 s), colores y qué datos se animan. Lo decide Mario Fernandes. |
+| Quién verifica | Mario Fernandes, en el navegador, con los pasos de «Cómo comprobarlo». Da él el visto bueno. |
 | Commits | `e404919` (creación), `41234dc` (corrección del umbral). |
 
 **Código clave**
@@ -52,6 +54,8 @@ observador.observe(historial);
 | Estado inicial | `stroke-dashoffset: 1` con `pathLength = 1` (línea invisible). |
 | Estado final | `stroke-dashoffset: 0` (línea completa). |
 | Desactivado con | `prefers-reduced-motion: reduce`. La gráfica se muestra completa sin animación. |
+| Dónde decide el usuario | Duración del dibujo (2,4 s), retardo entre trazos, colores de la gráfica, escala vertical y qué datos se muestran. Lo decide Mario Fernandes. |
+| Quién verifica | Mario Fernandes, en el navegador, con los pasos de «Cómo comprobarlo». Da él el visto bueno. |
 | Commits | `e404919` (primera versión, ligada al scroll), siguiente commit (versión automática). |
 
 **Código clave**
@@ -100,5 +104,7 @@ observadorGrafica.observe(grafica);
 | Estado inicial | ... |
 | Estado final | ... |
 | Desactivado con | ... |
+| Dónde decide el usuario | ... |
+| Quién verifica | ... |
 | Commits | ... |
 ```

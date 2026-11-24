@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Quién decide y quién verifica en las fichas del loop
+- **Cambio:** Las dos fichas del loop y la plantilla incluyen «Dónde decide el usuario» y «Quién verifica». En todas, las decisiones y la verificación son de Mario Fernandes: él decide los niveles, colores, duraciones y datos animados, y comprueba el resultado en el navegador antes de dar el visto bueno.
+- **Motivo:** Requisito de la entrega: cada ficha debe indicar dónde decide el usuario y quién verifica.
+- **Archivos afectados:** `project-definition/FICHAS-LOOP.md`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Nombre completo en el pie
 - **Cambio:** El pie de la web muestra «Mario Fernandes» en lugar de «MJ».
 - **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
