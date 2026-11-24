@@ -7,6 +7,8 @@
   --amarillo: #EFB11D;
   --tinta: #2a1206;
   --gris: #8a8178;
+  --rojo-texto: #B92E0E;   /* rojo para texto pequeño: contraste 4,99 sobre crema */
+  --gris-texto: #6B6259;   /* gris para texto: contraste 4,91 sobre crema */
 }
 
 * { box-sizing: border-box; }
@@ -35,7 +37,7 @@ body {
 }
 
 .logo {
-  color: var(--rojo);
+  color: var(--rojo-texto);
   font-weight: 700;
   text-decoration: none;
 }
@@ -49,7 +51,7 @@ body {
 .menu a {
   padding: 6px 12px;
   border-radius: 999px;
-  color: var(--rojo);
+  color: var(--rojo-texto);
   text-decoration: none;
   font-size: 14px;
   text-transform: uppercase;
@@ -58,7 +60,7 @@ body {
 .menu a:hover,
 .menu a:focus-visible,
 .menu a[aria-current="true"] {
-  background: var(--rojo);
+  background: var(--rojo-texto);
   color: var(--crema);
   outline: none;
 }
@@ -89,14 +91,14 @@ h2.titular { font-size: clamp(48px, 9vw, 120px); }
 
 .entradilla {
   max-width: 60ch;
-  color: var(--rojo);
+  color: var(--rojo-texto);
   font-size: 18px;
 }
 
 .pregunta { font-size: 20px; }
 
 .pendiente {
-  color: var(--gris);
+  color: var(--gris-texto);
   font-style: italic;
 }
 
@@ -235,7 +237,9 @@ select {
   font-size: 18px;
 }
 
-.lista-referentes a { color: var(--rojo); }
+.lista-referentes a { color: var(--rojo-texto); }
+
+.pie a { color: var(--tinta); }
 
 .pie {
   padding: 16px 32px;

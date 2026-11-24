@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Contraste accesible en textos pequeños
+- **Decisión/cambio:** Los textos pequeños (menú, logo, entradilla, enlaces de referentes) usan un rojo más oscuro (#B92E0E, contraste 4,99 sobre crema). El texto «pendiente» usa un gris más oscuro (#6B6259, contraste 4,91). El texto del pie pasa a color tinta. Los titulares grandes mantienen el rojo original.
+- **Motivo:** Revisión de accesibilidad: el rojo original daba 3,47 sobre crema y el gris 3,15, por debajo de 4,5 para texto normal.
+- **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
+
 ## 2026-11-24 — Vuelta completa: animación automática de la gráfica de evolución
 - **Comprender:** el usuario indica que con el scroll la gráfica de evolución no se ve entera, porque la animación avanza solo mientras se baja y en ese tramo no da tiempo a verla.
 - **Proponer:** sustituir la animación ligada al scroll por una animación por tiempo que se dispara al entrar en pantalla (threshold 0,3), y que se repite al volver al apartado. Archivos: `script.js`, `style.css`. Limitación: no se puede comprobar en móvil desde el entorno de trabajo.
