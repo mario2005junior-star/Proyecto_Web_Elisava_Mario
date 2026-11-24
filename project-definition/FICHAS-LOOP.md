@@ -9,38 +9,39 @@ Código: `script.js` (funciones `iniciaLoops`) y `style.css` (bloque «Loop de H
 
 ---
 
-## Ficha 1 · Barras de Historial
+## Ficha 1 · Barras y números de Datos
 
 | Campo | Contenido |
 |---|---|
-| Scroll trabajado | Entrada y salida de la sección «Historial de escucha» (dentro de Datos). |
-| Qué se repite | Cada vez que el bloque entra en pantalla, las barras crecen desde 0 hasta su valor. Al salir, vuelven a 0. |
-| Disparador | `IntersectionObserver` sobre `#historial` con `threshold: 0` (basta con que se vea cualquier parte del bloque). |
-| Estado inicial | `.bloque.anima:not(.en-vista) .relleno { width: 0 }`. |
-| Estado final | Ancho en % según el valor máximo del listado (`pintaBarras`). |
-| Desactivado con | `prefers-reduced-motion: reduce`. Las barras se muestran llenas sin animación. |
-| Dónde decide el usuario | Nivel de visibilidad del disparador, duración de la animación (0,6 s), colores y qué datos se animan. Lo decide Mario Fernandes. |
+| Scroll trabajado | Entrada y salida de cada bloque de «Datos» (Historial, Detalle por mes, Podcasts, Búsquedas, Publicidad y Sound Capsule). |
+| Qué se repite | Al entrar en pantalla, las barras crecen en cascada desde 0 y los números suben desde 0 hasta su valor. Al salir, todo vuelve a 0. |
+| Disparador | `IntersectionObserver` sobre cada `#datos .bloque` con `threshold: 0.1`. |
+| Estado inicial | `.bloque.anima:not(.en-vista) .relleno { width: 0 }` y los números a 0. |
+| Estado final | Ancho en % según el valor máximo de cada lista, y el valor real de cada dato. |
+| Desactivado con | `prefers-reduced-motion: reduce`. Todo se muestra completo, sin animación. |
+| Dónde decide el usuario | Nivel de visibilidad del disparador, duración de la animación (0,6 s para las barras y 1 s para los números), colores y qué datos se animan. Lo decide Mario Fernandes. |
 | Quién verifica | Mario Fernandes, en el navegador, con los pasos de «Cómo comprobarlo». Da él el visto bueno. |
-| Commits | `e404919` (creación), `41234dc` (corrección del umbral). |
+| Commits | `e404919` (creación), `41234dc` (corrección del umbral), `2949bba` (corrección del relleno), `bd322b6` (todos los bloques de Datos y los números). |
 
 **Código clave**
 ```js
-const historial = $("#historial");
-historial.classList.add("anima");
-const observador = new IntersectionObserver(
-  ([entrada]) => historial.classList.toggle("en-vista", entrada.isIntersecting),
-  { threshold: 0 }
-);
-observador.observe(historial);
+document.querySelectorAll("#datos .bloque").forEach(bloque => {
+  bloque.classList.add("anima");
+  const observador = new IntersectionObserver(
+    ([entrada]) => animaBloque(bloque, entrada.isIntersecting),
+    { threshold: 0.1 }
+  );
+  observador.observe(bloque);
+});
 ```
 ```css
 .bloque.anima .relleno { transition: width 0.6s ease; }
 .bloque.anima:not(.en-vista) .relleno { width: 0 !important; }
 ```
 
-**Decisión y problema resuelto:** la primera versión usaba `threshold: 0.25`. El bloque es muy alto, así que nunca llegaba al 25 % visible y las barras se quedaban vacías. Con `threshold: 0` funciona al entrar en pantalla.
+**Decisión y problema resuelto:** la primera versión del loop solo cubría Historial y usaba `threshold: 0.25`. El bloque es muy alto, así que nunca llegaba al 25 % visible y las barras se quedaban vacías. Con un umbral bajo funciona al entrar en pantalla. Después se generalizó a todos los bloques de Datos.
 
-**Cómo comprobarlo:** abrir la web, ir a «3 Datos», bajar hasta «Historial de escucha», subir y volver a bajar. Las barras deben vaciarse y volver a crecer.
+**Cómo comprobarlo:** abrir la web, ir a «3 Datos», bajar hasta cualquier bloque, subir y volver a bajar. Las barras y los números deben volver a 0 y construirse otra vez.
 
 ---
 
