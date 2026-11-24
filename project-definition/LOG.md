@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Referentes en la web
+- **Decisión/cambio:** La sección Referentes recoge los ocho referentes del archivo de Figma «Sin título» (`YUAGHb3RflqjLZ47A5asiX`), con nombre, enlace y lo que el usuario se lleva de cada uno. El archivo se leyó en solo lectura y no se modificó. Las capturas de pantalla del archivo no se han añadido a la web.
+- **Motivo:** Completar la sección Referentes de la web V1.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: decidir si las capturas se añaden a la web.
+
 ## 2026-11-24 — Se quita el apartado Otros archivos
 - **Decisión/cambio:** Se elimina el apartado «Otros archivos» de la sección Datos, por decisión del usuario. Se actualiza `CONTEXT.md`.
 - **Motivo:** El usuario indica que no lo quiere en la web.
