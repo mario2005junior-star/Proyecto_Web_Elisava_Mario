@@ -8,6 +8,13 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Conclusión con datos y cálculo de dB
+- **Cambio:** La sección Conclusión tiene tres bloques: lo que dicen los datos (artistas, tipos de música según las inferencias de Spotify, canciones más repetidas, mes con más escucha y artista top de cada mes), el cálculo de dB con las fórmulas OMS/ITU y NIOSH al 60 % de volumen, y un bloque pendiente para la conclusión personal.
+- **Comprobación:** Cifras calculadas desde `StreamingHistory_music_*.json` (solo música, sin podcasts) y `Inferences.json`. Los tiempos a dB se calcularon con las fórmulas de la propia sección Salud.
+- **Pendiente:** conclusión personal con las palabras del usuario; comprobar la fuente de Kim y Han.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Definición de reproducción en la gráfica
 - **Cambio:** El texto de la gráfica de evolución define qué cuenta cada punto: todas las escuchas del historial, también las de menos de 30 segundos. Se aclara que Spotify cuenta como stream solo las de al menos 30 segundos, con enlace a su ayuda para artistas.
 - **Motivo:** Los datos de la gráfica ya contaban todas las filas del historial. Se ha elegido mantener los datos y aclarar el texto, para no recalcular la gráfica.
