@@ -168,7 +168,7 @@ function pintaEvolucion() {
     svg.appendChild(t);
   });
   const titulo = el("text", { x: L, y: T - 6, "font-size": 12, fill: "#2a1206" });
-  titulo.textContent = "Reproducciones al mes";
+  titulo.textContent = "Nº de reproducciones al mes";
   svg.appendChild(titulo);
   MESES_CORTOS.forEach((mes, j) => {
     const t = el("text", { x: x(j), y: B + 18, "text-anchor": "middle", "font-size": 11, fill: "#2a1206" });
