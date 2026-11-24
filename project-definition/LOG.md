@@ -8,6 +8,11 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Referencia visual en el repositorio
+- **Cambio:** Se añade `project-definition/REFERENCIA-VISUAL.md` con la paleta de la referencia (loket.design), su relación con las variables de `style.css`, las fuentes usadas y los dos colores de texto añadidos por contraste. Se guarda también la captura de referencia en `project-definition/referencia-visual/`.
+- **Motivo:** Pedido del usuario: que la paleta y la tipografía de referencia estén en GitHub.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Cierre de la V1 para la entrega
 - **Cambio:** Se quita la sección «Trabajo hecho en clase» de la web y su enlace del menú, porque el usuario confirma que no va en este apartado. Se marcan como hechos en INSTRUCTIONS.md la recopilación de requisitos y criterios (rúbrica recibida) y la comprobación final, aprobada por el usuario.
 - **Pendiente:** calculadora personal (Salud), que el usuario deja para más adelante. Comprobar el dato de Kim y Han: el estudio existe y el máximo de 113,1 dB(A) coincide, pero no he confirmado el rango de 105,7 dB(A) ni el de 63–67 dB(A) a 60 % de volumen.
