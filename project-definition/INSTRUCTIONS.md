@@ -67,8 +67,8 @@ Desarrollar el proyecto web de Elisava de forma coherente con su concepto, los r
 - [x] Identificar el público destinatario.
 - [x] Establecer funcionalidades e interacciones necesarias.
 - [x] Confirmar la pregunta de investigación.
-- [ ] Recopilar los requisitos y criterios de evaluación de la asignatura. (Requisitos de la entrega 2 recogidos; criterios de evaluación pendientes.)
-- [x] Definir estructura y recorrido de navegación. (Contenidos pendientes en Referentes, Salud, Conclusión y Trabajo hecho en clase.)
+- [x] Recopilar los requisitos y criterios de evaluación de la asignatura. (Requisitos de la entrega 2 y rúbrica de evaluación recogidos.)
+- [x] Definir estructura y recorrido de navegación. (Contenidos pendientes: calculadora personal en Salud.)
 - [x] Acordar la dirección visual: referencias, tipografía, paleta y estilo.
 
 ### Primeras tareas técnicas
@@ -77,6 +77,6 @@ Desarrollar el proyecto web de Elisava de forma coherente con su concepto, los r
 - [x] Desarrollar el diseño visual acordado.
 - [x] Implementar y probar las interacciones necesarias (loops de scroll y animaciones de datos).
 - [x] Revisar accesibilidad y adaptación responsive. (Revisión visual en escritorio hecha y aprobada por el usuario; contraste de texto revisado. Adaptación a móvil fuera de alcance por decisión del usuario.)
-- [ ] Hacer una comprobación final antes de la entrega.
+- [x] Hacer una comprobación final antes de la entrega. (Revisada y aprobada por el usuario.)
 
 Marca una tarea como completada solo cuando el cambio esté implementado y comprobado.

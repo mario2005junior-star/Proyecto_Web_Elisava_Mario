@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Cierre de la V1 para la entrega
+- **Cambio:** Se quita la sección «Trabajo hecho en clase» de la web y su enlace del menú, porque el usuario confirma que no va en este apartado. Se marcan como hechos en INSTRUCTIONS.md la recopilación de requisitos y criterios (rúbrica recibida) y la comprobación final, aprobada por el usuario.
+- **Pendiente:** calculadora personal (Salud), que el usuario deja para más adelante. Comprobar el dato de Kim y Han: el estudio existe y el máximo de 113,1 dB(A) coincide, pero no he confirmado el rango de 105,7 dB(A) ni el de 63–67 dB(A) a 60 % de volumen.
+- **Archivos afectados:** `index.html`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Conclusión personal
 - **Cambio:** La sección Conclusión incluye la conclusión personal del usuario: concienciar sobre la salud auditiva y usar los datos para regular las horas y el volumen de escucha.
 - **Pendiente:** comprobar la fuente de Kim y Han.
