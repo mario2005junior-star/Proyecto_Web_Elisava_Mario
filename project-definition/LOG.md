@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Conclusión personal
+- **Cambio:** La sección Conclusión incluye la conclusión personal del usuario: concienciar sobre la salud auditiva y usar los datos para regular las horas y el volumen de escucha.
+- **Pendiente:** comprobar la fuente de Kim y Han.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Conclusión con datos y cálculo de dB
 - **Cambio:** La sección Conclusión tiene tres bloques: lo que dicen los datos (artistas, tipos de música según las inferencias de Spotify, canciones más repetidas, mes con más escucha y artista top de cada mes), el cálculo de dB con las fórmulas OMS/ITU y NIOSH al 60 % de volumen, y un bloque pendiente para la conclusión personal.
 - **Comprobación:** Cifras calculadas desde `StreamingHistory_music_*.json` (solo música, sin podcasts) y `Inferences.json`. Los tiempos a dB se calcularon con las fórmulas de la propia sección Salud.
