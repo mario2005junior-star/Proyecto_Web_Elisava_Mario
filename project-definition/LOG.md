@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Barras de Detalle por mes con animación
+- **Decisión/cambio:** Las barras de artistas top del mes se construyen desde cero al entrar en el apartado y cada vez que se cambia de mes, con un pequeño retraso entre filas. Se añade como tercer loop en `script.js`.
+- **Motivo:** Que el detalle de cada mes se vaya construyendo igual que la gráfica de evolución.
+- **Archivos afectados:** `script.js`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: comprobar en la web publicada.
+
 ## 2026-11-24 — Unidad de la gráfica de evolución
 - **Decisión/cambio:** La gráfica se explica como número de reproducciones (veces que se reprodujo música de cada artista en el mes), no como tiempo. Se cambia el título del eje a «Nº de reproducciones al mes» y se aclara el texto de introducción, indicando que las horas están en Historial.
 - **Motivo:** Que quede claro qué mide cada valor del eje. La definición exacta de «reproducción» en el archivo de Spotify está pendiente de confirmar.

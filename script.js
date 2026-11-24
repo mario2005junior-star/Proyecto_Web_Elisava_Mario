@@ -85,18 +85,28 @@ function formatea(n) {
 }
 
 // Dibuja una lista de barras dentro de un contenedor
-function pintaBarras(contenedor, filas, unidad = "") {
+function pintaBarras(contenedor, filas, unidad = "", animar = false) {
   const max = Math.max(...filas.map(f => f[1]));
   contenedor.innerHTML = "";
   for (const [etiqueta, valor] of filas) {
     const fila = document.createElement("div");
     fila.className = "barra";
+    const ancho = (valor / max) * 100;
     fila.innerHTML =
       `<span class="etiqueta"></span>` +
-      `<span class="pista"><span class="relleno" style="width:${(valor / max) * 100}%"></span></span>` +
+      `<span class="pista"><span class="relleno" data-ancho="${ancho}" style="width:${animar ? 0 : ancho}%"></span></span>` +
       `<span class="valor">${formatea(valor)}${unidad}</span>`;
     fila.querySelector(".etiqueta").textContent = etiqueta;
     contenedor.appendChild(fila);
+  }
+  if (animar) {
+    // Dos frames después de crear las filas, para que el navegador registre el 0 antes de animar
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      contenedor.querySelectorAll(".relleno").forEach((r, i) => {
+        r.style.transitionDelay = `${i * 0.06}s`;
+        r.style.width = r.dataset.ancho + "%";
+      });
+    }));
   }
 }
 
@@ -114,11 +124,11 @@ function pintaHistorial() {
 }
 
 // ---------- Detalle por mes ----------
-function pintaMes(i) {
+function pintaMes(i, animar = false) {
   const m = MESES[i];
   $("#mes-horas").textContent = formatea(m.horas);
   $("#mes-plays").textContent = m.plays;
-  pintaBarras($("#mes-artistas"), m.artistas);
+  pintaBarras($("#mes-artistas"), m.artistas, "", animar);
   const tbody = $("#mes-canciones");
   tbody.innerHTML = "";
   for (const [cancion, artista, reproducciones] of m.canciones) {
@@ -140,7 +150,7 @@ function pintaSelectorMes() {
     select.appendChild(op);
   });
   select.value = MESES.length - 1;
-  select.addEventListener("change", () => pintaMes(Number(select.value)));
+  select.addEventListener("change", () => pintaMes(Number(select.value), true));
   pintaMes(MESES.length - 1);
 }
 
@@ -262,6 +272,12 @@ function iniciaLoops() {
     });
   }, { threshold: 0.3 });
   observadorGrafica.observe(grafica);
+
+  // Loop 3: las barras de artistas del mes se construyen al entrar en el apartado
+  const observadorDetalle = new IntersectionObserver(([entrada]) => {
+    if (entrada.isIntersecting) pintaMes(Number($("#mes").value), true);
+  }, { threshold: 0.2 });
+  observadorDetalle.observe($("#detalle"));
 }
 
 // ---------- Arranque ----------
