@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Fuentes oficiales para el cálculo de dB
+- **Cambio:** La sección Salud añade tres fuentes oficiales: OMS (preguntas frecuentes), OMS (nota de 2024 sobre el intercambio de 3 dB) y CDC/NIOSH (límite de 85 dBA). La Conclusión enlaza la regla de 3 dB a la OMS y al NIOSH.
+- **Verificado:** La fórmula T = 40 / 2^((L−80)/3) da 20 h a 83 dB, 10 h a 86 dB y unas 4 h a 90 dB, igual que los ejemplos de la OMS. Las fuentes dan la regla; la fórmula es su forma matemática.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** subido a `main`.
+
 ## 2026-11-24 — Quitado el estudio de Kim y Han
 - **Cambio:** Se quitan de Salud las cifras basadas en Kim y Han (fila del 60 % de volumen, primer paso de riesgo, volumen máximo de seis smartphones, fila 2018 de la línea de tiempo y la fuente). En Conclusión, el cálculo de dB se hace a 63 y 67 dB(A) como niveles de ejemplo, sin atribuirlos a ningún estudio.
 - **Motivo:** El usuario decide quitarlo, porque no es importante y no estaba verificado.
