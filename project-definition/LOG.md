@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Resumen del día: web V1 y datos
+- **Qué se hizo:** referentes (ocho capturas, enlaces y lo que se lleva de cada uno, desde las notas de Figma en solo lectura); Datos con barras y números que se construyen al entrar en pantalla; definición de qué cuenta cada punto de la gráfica de evolución; sección Conclusión con datos, cálculo de dB y texto personal; se quitó «Trabajo hecho en clase»; referencia visual de paleta y tipografía en el repositorio; revisión visual y accesibilidad marcada como hecha.
+- **Commits subidos a `main` hoy:** `1f991ae`, `2949bba`, `b137496`, `3189375`, `befde1d`, `d218759`, `4014436`, `fb6867a`, `77777bb`, `8012895`, `04b7948`, `596fb57`, `788b1b4`, `593620f`, `558de2f`, `1c75ec4`, `db90836`, `bd322b6`, `2074ac6`, `0f7fe6b`, `39e075c`, `25d9f8e`, `33c00c1`, `0f4e336`.
+- **Pendiente para la entrega:** calculadora personal (Salud, la deja el usuario para más adelante); comprobar la cifra de Kim y Han (63–67 dB(A) a 60 % de volumen y 105,7 dB(A)), que aparece en Salud y en Conclusión.
+- **Estado:** todo subido a `main`.
+
 ## 2026-11-24 — Contraste accesible en textos pequeños
 - **Decisión/cambio:** Los textos pequeños (menú, logo, entradilla, enlaces de referentes) usan un rojo más oscuro (#B92E0E, contraste 4,99 sobre crema). El texto «pendiente» usa un gris más oscuro (#6B6259, contraste 4,91). El texto del pie pasa a color tinta. Los titulares grandes mantienen el rojo original.
 - **Motivo:** Revisión de accesibilidad: el rojo original daba 3,47 sobre crema y el gris 3,15, por debajo de 4,5 para texto normal.
@@ -11,51 +17,51 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 ## 2026-11-24 — Referencia visual en el repositorio
 - **Cambio:** Se añade `project-definition/REFERENCIA-VISUAL.md` con la paleta de la referencia (loket.design), su relación con las variables de `style.css`, las fuentes usadas y los dos colores de texto añadidos por contraste. Se guarda también la captura de referencia en `project-definition/referencia-visual/`.
 - **Motivo:** Pedido del usuario: que la paleta y la tipografía de referencia estén en GitHub.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Cierre de la V1 para la entrega
 - **Cambio:** Se quita la sección «Trabajo hecho en clase» de la web y su enlace del menú, porque el usuario confirma que no va en este apartado. Se marcan como hechos en INSTRUCTIONS.md la recopilación de requisitos y criterios (rúbrica recibida) y la comprobación final, aprobada por el usuario.
 - **Pendiente:** calculadora personal (Salud), que el usuario deja para más adelante. Comprobar el dato de Kim y Han: el estudio existe y el máximo de 113,1 dB(A) coincide, pero no he confirmado el rango de 105,7 dB(A) ni el de 63–67 dB(A) a 60 % de volumen.
 - **Archivos afectados:** `index.html`, `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Conclusión personal
 - **Cambio:** La sección Conclusión incluye la conclusión personal del usuario: concienciar sobre la salud auditiva y usar los datos para regular las horas y el volumen de escucha.
 - **Pendiente:** comprobar la fuente de Kim y Han.
 - **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Conclusión con datos y cálculo de dB
 - **Cambio:** La sección Conclusión tiene tres bloques: lo que dicen los datos (artistas, tipos de música según las inferencias de Spotify, canciones más repetidas, mes con más escucha y artista top de cada mes), el cálculo de dB con las fórmulas OMS/ITU y NIOSH al 60 % de volumen, y un bloque pendiente para la conclusión personal.
 - **Comprobación:** Cifras calculadas desde `StreamingHistory_music_*.json` (solo música, sin podcasts) y `Inferences.json`. Los tiempos a dB se calcularon con las fórmulas de la propia sección Salud.
 - **Pendiente:** conclusión personal con las palabras del usuario; comprobar la fuente de Kim y Han.
 - **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Definición de reproducción en la gráfica
 - **Cambio:** El texto de la gráfica de evolución define qué cuenta cada punto: todas las escuchas del historial, también las de menos de 30 segundos. Se aclara que Spotify cuenta como stream solo las de al menos 30 segundos, con enlace a su ayuda para artistas.
 - **Motivo:** Los datos de la gráfica ya contaban todas las filas del historial. Se ha elegido mantener los datos y aclarar el texto, para no recalcular la gráfica.
 - **Comprobación:** Los valores de la gráfica coinciden con el recuento de todas las filas de cada artista y mes en `StreamingHistory_music_*.json`.
 - **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Revisión visual y accesibilidad
 - **Cambio:** Se marca como hecho el punto de revisión visual y accesibilidad en INSTRUCTIONS.md. El usuario ha revisado la web en escritorio y está conforme. El contraste de texto ya se revisó antes. La adaptación a móvil queda fuera de alcance por decisión del usuario.
 - **Archivos afectados:** `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Datos se construye al entrar en pantalla
 - **Cambio:** Todos los bloques de Datos (historial, detalle por mes, podcasts, búsquedas, publicidad, Sound Capsule) construyen sus barras en cascada y sus números suben desde 0 al entrar en pantalla, y vuelven a 0 al salir. El detalle por mes también cuenta sus cifras al cambiar de mes.
 - **Motivo:** Pedido del usuario: que la sección se vaya construyendo mientras se hace scroll.
 - **Archivos afectados:** `script.js`, `index.html` (versión `script.js?v=3`), `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`. Las tarjetas de Wrapped no cuentan, porque sus valores son texto y no números.
+- **Estado:** subido a `main`. Las tarjetas de Wrapped no cuentan, porque sus valores son texto y no números.
 
 ## 2026-11-24 — Referentes en la web
 - **Cambio:** La sección Referentes muestra las ocho capturas de `img/referentes/`, con su enlace y lo que el usuario se lleva de cada uno (texto de las notas «¿Qué me llevo?» del archivo de Figma, solo lectura).
 - **Corrección:** Las primeras descripciones que añadí no salían del archivo (solo había leído nombres y enlaces). Se han sustituido por las notas reales.
 - **Pendiente:** confirmar la captura 5 (sin asignar con seguridad a DRĄSA STUDIO).
 - **Archivos afectados:** `index.html`, `img/referentes/`, `project-definition/LOG.md`.
-- **Estado:** en local, sin subir a `main`.
+- **Estado:** subido a `main`.
 
 ## 2026-11-24 — Se quita el apartado Otros archivos
 - **Decisión/cambio:** Se elimina el apartado «Otros archivos» de la sección Datos, por decisión del usuario. Se actualiza `CONTEXT.md`.
