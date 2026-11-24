@@ -8,6 +8,13 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Contenido de la sección Salud
+- **Decisión/cambio:** La sección Salud recoge el contenido informativo sobre riesgo auditivo aportado por el usuario: guías de referencia, fórmulas de dosis con ejemplos, volumen del móvil, factores de riesgo, tiempos orientativos, señales de alarma y evidencia en jóvenes. La calculadora personal queda pendiente.
+- **Corrección:** el ejemplo NIOSH del documento aportado tenía errores de cálculo. A 96 dB(A), 1 h supone el 158,7 % (no el 100 %), la dosis total es 238,1 % (no 179,4 %) y el TWA es 88,8 dB(A) (no 91,9). Se publican las cifras corregidas. Las demás cuentas del documento se han comprobado y son correctas.
+- **Motivo:** Completar la sección Salud de la web V1.
+- **Archivos afectados:** `index.html`, `project-definition/CONTEXT.md`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: que el usuario revise la sección en el ordenador y confirme las fuentes que quiere citar.
+
 ## 2026-11-24 — Vuelta completa: animación automática de la gráfica de evolución
 - **Comprender:** el usuario indica que con el scroll la gráfica de evolución no se ve entera, porque la animación avanza solo mientras se baja y en ese tramo no da tiempo a verla.
 - **Proponer:** sustituir la animación ligada al scroll por una animación por tiempo que se dispara al entrar en pantalla (threshold 0,3), y que se repite al volver al apartado. Archivos: `script.js`, `style.css`. Limitación: no se puede comprobar en móvil desde el entorno de trabajo.

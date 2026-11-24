@@ -120,7 +120,121 @@
     <!-- 4. SALUD AUDITIVA -->
     <section id="salud" class="seccion" aria-labelledby="t-salud" hidden>
       <h2 class="titular" id="t-salud">Salud</h2>
-      <p class="pendiente">Pendiente: explicación de cómo afecta la música a los oídos, según los datos recopilados.</p>
+      <p class="entradilla">El riesgo auditivo depende del nivel sonoro, de la duración y de la frecuencia de la exposición. Esta información es orientativa: no sustituye una audiometría ni el consejo de un profesional.</p>
+
+      <article class="bloque">
+        <h3>1. Guías de referencia</h3>
+        <table class="tabla">
+          <thead><tr><th>Guía</th><th>Nivel</th><th>Tiempo máximo</th><th>Intercambio</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td>OMS/ITU H.870, Modo 1 (adultos)</td><td>80 dB(A)</td><td>40 h/semana</td><td>Dosis semanal 1,6 Pa²h; +3 dB reduce a la mitad</td><td>Escucha personal no laboral</td></tr>
+            <tr><td>OMS/ITU H.870, Modo 2</td><td>75 dB(A)</td><td>40 h/semana</td><td>0,51 Pa²h/semana</td><td>Niños, adolescentes o criterio conservador</td></tr>
+            <tr><td>NIOSH</td><td>85 dB(A)</td><td>8 h/día</td><td>3 dB: +3 dB = mitad del tiempo</td><td>Prevención laboral; criterio conservador</td></tr>
+            <tr><td>OSHA</td><td>90 dB(A)</td><td>8 h/día</td><td>5 dB: +5 dB = mitad del tiempo</td><td>Límite laboral EE. UU.; menos conservador</td></tr>
+            <tr><td>Directiva 2003/10/CE</td><td>80 y 85 dB(A) acción; 87 dB(A) límite</td><td>8 h/día o semana</td><td>TWA normalizado a 8 h</td><td>Marco laboral europeo</td></tr>
+          </tbody>
+        </table>
+        <p>La Directiva europea fija L<sub>EX,8h</sub> de 80 dB(A) como valor inferior de acción, 85 dB(A) como superior y 87 dB(A) como límite máximo, además de límites de presión pico de 112, 140 y 200 Pa.</p>
+      </article>
+
+      <article class="bloque">
+        <h3>2. Cómo se calcula la dosis</h3>
+        <h4>NIOSH (intercambio de 3 dB)</h4>
+        <p>T(L) = 8 / 2<sup>(L − 85)/3</sup> horas.<br>D = Σ [tᵢ / T(Lᵢ)] × 100 %.<br>TWA = 85 + 3 × log₂(D / 100).</p>
+        <p><strong>Ejemplo:</strong> 2 h a 90 dB(A) y 1 h a 96 dB(A). A 90 dB(A) el tiempo máximo es 2,52 h, así que 2 h suponen un 79,4 %. A 96 dB(A) el tiempo máximo es 0,63 h, así que 1 h supone un 158,7 %. Dosis total: 238,1 %. TWA ≈ 88,8 dB(A). Supera el 100 % de NIOSH.</p>
+        <h4>OMS/ITU (dosis semanal)</h4>
+        <p>T80(L) = 40 / 2<sup>(L − 80)/3</sup> horas por semana.<br>CSD = Σ [tᵢ / T80(Lᵢ)] × 100 %.</p>
+        <p><strong>Ejemplo:</strong> 1 h al día durante 5 días a 85 dB(A) = 5 h por semana. T80(85) = 12,6 h por semana. CSD = 5 / 12,6 × 100 = 39,7 %. Usa aproximadamente el 40 % del permiso semanal adulto.</p>
+      </article>
+
+      <article class="bloque">
+        <h3>3. Volumen del móvil y dB reales</h3>
+        <p>No existe una correspondencia universal entre porcentaje de volumen y decibelios. El mismo ajuste puede dar niveles distintos según el teléfono, el auricular, el ecualizador, el códec, el ajuste del auricular y la música. La OMS recomienda ajustar el volumen en un entorno tranquilo y no superar el 60 % del máximo.</p>
+        <table class="tabla">
+          <thead><tr><th>Ajuste o medición</th><th>Nivel aproximado</th><th>Fiabilidad</th></tr></thead>
+          <tbody>
+            <tr><td>60 % del máximo, en ambiente tranquilo</td><td>63–67 dB(A) en estudio con seis smartphones</td><td>Medición concreta, limitada a modelos y condiciones</td></tr>
+            <tr><td>Primer «paso de riesgo» del móvil</td><td>84,1–92,4 dB(A)</td><td>Medición experimental; varía entre modelos</td></tr>
+            <tr><td>Volumen máximo de seis smartphones</td><td>105,7–113,1 dB(A)</td><td>Medición experimental</td></tr>
+            <tr><td>Auriculares intraaurales al máximo</td><td>88–113 dB(A)</td><td>Rango de mediciones recogido por la OMS</td></tr>
+            <tr><td>Dispositivos personales en general</td><td>75–136 dB(A) máximo</td><td>Rango amplio; no sirve para un caso concreto</td></tr>
+            <tr><td>Uso habitual de usuarios</td><td>75–105 dB</td><td>Estimación recogida por la OMS</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="bloque">
+        <h3>4. Factores que cambian el riesgo</h3>
+        <ul>
+          <li>Los intraaurales tienden a producir mayor exposición que otros auriculares al mismo volumen, por su mejor sellado.</li>
+          <li>Un ajuste más hermético puede aumentar el nivel percibido hasta 16 dB.</li>
+          <li>En ambientes ruidosos suele subir el volumen; conviene usar cancelación de ruido o buen aislamiento.</li>
+          <li>La duración importa tanto como el nivel: el daño se relaciona con energía acumulada.</li>
+          <li>Las pausas reducen la exposición futura, pero no compensan una dosis ya recibida.</li>
+          <li>La OMS/ITU recomienda 75 dB(A) durante 40 h semanales para niños y usuarios sensibles.</li>
+          <li>Los picos de presión acústica también importan y no quedan reflejados en una media.</li>
+        </ul>
+      </article>
+
+      <article class="bloque">
+        <h3>5. Tiempos orientativos</h3>
+        <h4>NIOSH: 85 dB(A) durante 8 h, intercambio de 3 dB</h4>
+        <table class="tabla">
+          <thead><tr><th>Nivel estimado</th><th>Tiempo máximo diario</th></tr></thead>
+          <tbody>
+            <tr><td>85 dB(A)</td><td>8 h</td></tr>
+            <tr><td>88 dB(A)</td><td>4 h</td></tr>
+            <tr><td>91 dB(A)</td><td>2 h</td></tr>
+            <tr><td>94 dB(A)</td><td>1 h</td></tr>
+            <tr><td>97 dB(A)</td><td>30 min</td></tr>
+            <tr><td>100 dB(A)</td><td>15 min</td></tr>
+            <tr><td>103 dB(A)</td><td>7,5 min</td></tr>
+            <tr><td>106 dB(A)</td><td>3,75 min</td></tr>
+          </tbody>
+        </table>
+        <h4>OMS/ITU: 80 dB(A) durante 40 h semanales</h4>
+        <table class="tabla">
+          <thead><tr><th>Nivel estimado</th><th>Tiempo máximo semanal</th></tr></thead>
+          <tbody>
+            <tr><td>80 dB(A)</td><td>40 h</td></tr>
+            <tr><td>83 dB(A)</td><td>20 h</td></tr>
+            <tr><td>86 dB(A)</td><td>10 h</td></tr>
+            <tr><td>89 dB(A)</td><td>5 h</td></tr>
+            <tr><td>92 dB(A)</td><td>2,5 h</td></tr>
+            <tr><td>95 dB(A)</td><td>1,25 h</td></tr>
+            <tr><td>98 dB(A)</td><td>37,5 min</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="bloque">
+        <h3>6. Señales de alarma</h3>
+        <ul>
+          <li>Zumbido o pitido, sobre todo si persiste tras dejar de escuchar.</li>
+          <li>Sensación de oído tapado, presión o entumecimiento.</li>
+          <li>Dificultad para entender conversaciones en ambientes ruidosos.</li>
+          <li>Necesidad creciente de subir el volumen.</li>
+          <li>Hipersensibilidad temporal a sonidos normales.</li>
+        </ul>
+        <p>Consulta a un médico o audiólogo si el zumbido o el oído tapado dura más de 24–48 horas, si aparece de forma súbita, si hay pérdida auditiva evidente, dolor, vértigo o descarga. La pérdida auditiva inducida por ruido suele ser gradual e irreversible.</p>
+      </article>
+
+      <article class="bloque">
+        <h3>7. Evidencia en jóvenes</h3>
+        <table class="tabla">
+          <thead><tr><th>Año</th><th>Fuente</th><th>Dato</th></tr></thead>
+          <tbody>
+            <tr><td>2015</td><td>OMS</td><td>1.100 millones de jóvenes de 12–35 años en riesgo por escucha insegura; cerca del 50 % se expone a niveles inseguros con dispositivos personales y 40 % en ocio.</td></tr>
+            <tr><td>2015</td><td>OMS</td><td>En EE. UU., la pérdida auditiva en adolescentes de 12–19 años pasó del 3,5 % en 1994 al 5,3 % en 2006.</td></tr>
+            <tr><td>2019</td><td>OMS</td><td>Más de 1.000 millones de jóvenes de 12–35 años en riesgo por exposición recreativa a sonidos fuertes.</td></tr>
+            <tr><td>2022</td><td>OMS</td><td>Más de 1.000 millones de personas de 12–35 años en riesgo por música y sonidos recreativos prolongados o excesivos.</td></tr>
+            <tr><td>2018</td><td>Kim y Han</td><td>Seis smartphones: máximos de 105,7–113,1 dB(A); a 60 % de volumen, 63–67 dB(A).</td></tr>
+            <tr><td>2015</td><td>OMS</td><td>Salida de dispositivos personales: 75–136 dB; uso habitual: 75–105 dB.</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <p class="pendiente">Pendiente: la calculadora personal, en la que el visitante introduce su tiempo de escucha semanal y su tipo de auricular.</p>
     </section>
 
     <!-- 5. CONCLUSIÓN -->
