@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Fichas del loop y proceso documentado
+- **Decisión/cambio:** Se crea `project-definition/FICHAS-LOOP.md` con una ficha por cada loop de scroll (Barras de Historial y Dibujo de la gráfica de evolución), el código clave, cómo comprobar cada uno, y el proceso paso a paso para repetirlo. Se añade un enlace a ese documento en el pie de la web.
+- **Motivo:** La entrega pide compartir el proceso con el que se construye la web, con las fichas del loop de cada scroll, en GitHub y en GitHub Pages, y que el proceso se pueda seguir y repetir.
+- **Archivos afectados:** `project-definition/FICHAS-LOOP.md` (nuevo), `index.html`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: confirmar el criterio de «loop» con el profesor y revisar las fichas en móvil.
+
 ## 2026-11-23 — Estado de la web: resumen de lo hablado
 - **Decisión/cambio:** Se publica la web V1 en GitHub Pages, en https://mario2005junior-star.github.io/Proyecto_Web_Elisava_Mario/ (Settings → Pages, rama `main`, carpeta `/ (root)`). La web tiene seis secciones (Introducción, Referentes, Datos, Salud, Conclusión y Trabajo hecho en clase) con navegación entre ellas, y usa la paleta de la referencia visual. En Datos se muestran los datos de Spotify ya extraídos (historial, detalle por mes, evolución de artistas, podcasts, biblioteca, playlists, búsquedas, Wrapped, publicidad y Sound Capsule). Se añaden dos loops de scroll: las barras de Historial crecen al entrar en pantalla y se vacían al salir, y la gráfica de evolución se dibuja según avanza el scroll. El umbral del loop de Historial se corrige a 0 para que las barras se vean llenas.
 - **Motivo:** Cumplir el requisito de la entrega del 25.11.26 (versión V1 publicada y loops de scroll). El criterio de «loop» del curso no estaba claro: la definición encontrada en internet era general, así que se eligieron los dos efectos de scroll con el criterio de «efecto que se repite al hacer scroll».
