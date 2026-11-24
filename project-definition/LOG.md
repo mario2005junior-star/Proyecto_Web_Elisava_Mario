@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Escala vertical en la gráfica de evolución
+- **Decisión/cambio:** Se añaden líneas de referencia con 0, 250, 500 y 750 reproducciones y el título «Reproducciones al mes» en el eje vertical de la gráfica.
+- **Motivo:** La gráfica no permitía saber qué cantidad representaba cada altura.
+- **Archivos afectados:** `script.js`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`.
+
 ## 2026-11-24 — Gráfica de evolución con animación automática
 - **Decisión/cambio:** La gráfica ya no depende del scroll. Al entrar en pantalla, las seis líneas se dibujan solas en unos 2,4 s, una tras otra, y se repiten cada vez que se vuelve al apartado. Con movimiento reducido se muestra completa. Se actualiza la ficha 2 de `FICHAS-LOOP.md`.
 - **Motivo:** Con el scroll, la gráfica se dibujaba solo mientras se bajaba, y en ese tramo no daba tiempo a verla entera.

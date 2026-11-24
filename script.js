@@ -159,6 +159,17 @@ function pintaEvolucion() {
   };
   svg.innerHTML = "";
   svg.appendChild(el("line", { x1: L, x2: R, y1: B, y2: B, stroke: "#8a8178" }));
+  // Escala vertical: líneas de referencia con el número de reproducciones
+  [0, 250, 500, 750].forEach(v => {
+    const yy = y(v);
+    svg.appendChild(el("line", { x1: L, x2: R, y1: yy, y2: yy, stroke: "#8a8178", "stroke-opacity": v === 0 ? 1 : 0.35 }));
+    const t = el("text", { x: L - 8, y: yy + 4, "text-anchor": "end", "font-size": 11, fill: "#2a1206" });
+    t.textContent = v;
+    svg.appendChild(t);
+  });
+  const titulo = el("text", { x: L, y: T - 6, "font-size": 12, fill: "#2a1206" });
+  titulo.textContent = "Reproducciones al mes";
+  svg.appendChild(titulo);
   MESES_CORTOS.forEach((mes, j) => {
     const t = el("text", { x: x(j), y: B + 18, "text-anchor": "middle", "font-size": 11, fill: "#2a1206" });
     t.textContent = mes;
