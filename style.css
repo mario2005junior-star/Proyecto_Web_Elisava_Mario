@@ -136,6 +136,7 @@ h2.titular { font-size: clamp(48px, 9vw, 120px); }
 .barra .etiqueta { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .barra .pista {
+  display: block;
   height: 14px;
   background: rgba(42, 18, 6, 0.08);
   border-radius: 999px;
@@ -143,6 +144,7 @@ h2.titular { font-size: clamp(48px, 9vw, 120px); }
 }
 
 .barra .relleno {
+  display: block;
   height: 100%;
   background: var(--rojo);
   border-radius: 999px;

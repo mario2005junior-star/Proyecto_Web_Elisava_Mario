@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Corrección del relleno de las barras
+- **Decisión/cambio:** Las barras de todos los apartados aparecían vacías porque `.pista` y `.relleno` son elementos en línea, y en línea no admiten altura ni ancho. Se hacen bloques (`display: block`). La corrección del umbral del 23 de noviembre no era la causa real.
+- **Motivo:** Que se vea la barra llena según el valor de cada fila.
+- **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: comprobar en la web publicada.
+
 ## 2026-11-24 — Fichas del loop y proceso documentado
 - **Decisión/cambio:** Se crea `project-definition/FICHAS-LOOP.md` con una ficha por cada loop de scroll (Barras de Historial y Dibujo de la gráfica de evolución), el código clave, cómo comprobar cada uno, y el proceso paso a paso para repetirlo. Se añade un enlace a ese documento en el pie de la web.
 - **Motivo:** La entrega pide compartir el proceso con el que se construye la web, con las fichas del loop de cada scroll, en GitHub y en GitHub Pages, y que el proceso se pueda seguir y repetir.
