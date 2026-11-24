@@ -8,6 +8,11 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Revisión visual y accesibilidad
+- **Cambio:** Se marca como hecho el punto de revisión visual y accesibilidad en INSTRUCTIONS.md. El usuario ha revisado la web en escritorio y está conforme. El contraste de texto ya se revisó antes. La adaptación a móvil queda fuera de alcance por decisión del usuario.
+- **Archivos afectados:** `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Datos se construye al entrar en pantalla
 - **Cambio:** Todos los bloques de Datos (historial, detalle por mes, podcasts, búsquedas, publicidad, Sound Capsule) construyen sus barras en cascada y sus números suben desde 0 al entrar en pantalla, y vuelven a 0 al salir. El detalle por mes también cuenta sus cifras al cambiar de mes.
 - **Motivo:** Pedido del usuario: que la sección se vaya construyendo mientras se hace scroll.

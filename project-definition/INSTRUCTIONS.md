@@ -76,7 +76,7 @@ Desarrollar el proyecto web de Elisava de forma coherente con su concepto, los r
 - [x] Sustituir los textos provisionales de la plantilla por la estructura de la web V1. Quedan pendientes los contenidos sin confirmar.
 - [x] Desarrollar el diseño visual acordado.
 - [x] Implementar y probar las interacciones necesarias (loops de scroll y animaciones de datos).
-- [ ] Revisar accesibilidad y adaptación responsive.
+- [x] Revisar accesibilidad y adaptación responsive. (Revisión visual en escritorio hecha y aprobada por el usuario; contraste de texto revisado. Adaptación a móvil fuera de alcance por decisión del usuario.)
 - [ ] Hacer una comprobación final antes de la entrega.
 
 Marca una tarea como completada solo cuando el cambio esté implementado y comprobado.
