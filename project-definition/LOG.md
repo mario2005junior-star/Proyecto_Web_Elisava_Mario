@@ -2,6 +2,14 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Vuelta completa: animación automática de la gráfica de evolución
+- **Comprender:** el usuario indica que con el scroll la gráfica de evolución no se ve entera, porque la animación avanza solo mientras se baja y en ese tramo no da tiempo a verla.
+- **Proponer:** sustituir la animación ligada al scroll por una animación por tiempo que se dispara al entrar en pantalla (threshold 0,3), y que se repite al volver al apartado. Archivos: `script.js`, `style.css`. Limitación: no se puede comprobar en móvil desde el entorno de trabajo.
+- **Implementar:** commit `3189375`. Se añade la clase `dibuja` a la gráfica y una transición de 2,4 s en el trazo de cada artista, con un retraso de 0,2 s entre líneas. Movimiento reducido: se muestra completa.
+- **Verificar:** prueba en navegador local (Playwright): al entrar en la sección, el trazo pasa de 0,81 px a 0 px en unos 3 s, sin errores de consola. Pendiente: comprobar en la web publicada y en móvil.
+- **Documentar:** entradas de este LOG, ficha 2 de `FICHAS-LOOP.md` actualizada, y `CONTEXT.md` con el comportamiento actual.
+- **Comunicar:** se avisa al usuario de que la web publicada tarda uno o dos minutos en actualizarse y se indica cómo recargar con Cmd+Shift+R.
+
 ## 2026-11-24 — Barras de Detalle por mes con animación
 - **Decisión/cambio:** Las barras de artistas top del mes se construyen desde cero al entrar en el apartado y cada vez que se cambia de mes, con un pequeño retraso entre filas. Se añade como tercer loop en `script.js`.
 - **Motivo:** Que el detalle de cada mes se vaya construyendo igual que la gráfica de evolución.

@@ -25,7 +25,11 @@ La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Versión
 - `style.css` usa la paleta de la referencia visual (fondo crema, rojos, rosas y amarillo) y es responsive.
 - `script.js` contiene los datos de Spotify ya extraídos (historial, detalle por mes de 13 meses, evolución de artistas, podcasts, biblioteca, playlists, búsquedas, Wrapped, publicidad, Sound Capsule). Los datos están fijos en el código, no se actualizan solos.
 - El gráfico de horas por hora del día no está incluido en esta versión.
-- Pendiente: publicar en GitHub Pages (Settings → Páginas, rama `main`) y apuntar la URL resultante en la entrega.
+- Publicada en GitHub Pages: https://mario2005junior-star.github.io/Proyecto_Web_Elisava_Mario/ (Settings → Páginas, rama `main`, carpeta `/ (root)`).
+- Dos loops de scroll: barras de Historial (crecen al entrar en pantalla) y gráfica de evolución (se dibuja sola al entrar). Las barras de artistas de «Detalle por mes» se construyen al entrar y al cambiar de mes.
+- La gráfica de evolución mide número de reproducciones al mes (eje con 0, 250, 500 y 750), no tiempo. Las horas están en Historial.
+- Las fichas del loop y el proceso para repetirlo están en `project-definition/FICHAS-LOOP.md`. El pie de la web enlaza a ese documento.
+- Pendiente: contenido de Referentes, Salud, Conclusión, Trabajo hecho en clase y Otros archivos; y confirmar la definición de «reproducción» en el archivo de Spotify.
 
 ## Pregunta de investigación
 «¿Cómo está mi salud auditiva durante un año entero?»
