@@ -2,6 +2,11 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — CONTEXT al día con la V1
+- **Cambio:** `CONTEXT.md` refleja la web tal como está: cinco secciones (sin Trabajo hecho en clase), contenido de Referentes y Conclusión, loops de Datos y gráfica, definición de la gráfica, paleta de referencia y pendientes reales (calculadora y Kim y Han).
+- **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Ficha 1 del loop al día
 - **Cambio:** La ficha 1 de `FICHAS-LOOP.md` describe el loop actual: todos los bloques de Datos, con barras y números que suben al entrar en pantalla. Incluye los commits de la generalización y los campos «Dónde decide el usuario» y «Quién verifica».
 - **Archivos afectados:** `project-definition/FICHAS-LOOP.md`, `project-definition/LOG.md`.

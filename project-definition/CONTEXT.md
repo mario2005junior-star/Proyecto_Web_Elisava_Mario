@@ -21,16 +21,19 @@ Jóvenes de 18 a 30 años.
 
 ## Estado conocido del repositorio
 La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Versión V1 de la web:
-- `index.html` tiene seis secciones con el mismo orden que la memoria: 1 Introducción, 2 Referentes, 3 Datos, 4 Salud, 5 Conclusión y 6 Trabajo hecho en clase. Salud, Conclusión y Trabajo hecho en clase están pendientes de contenido.
+- `index.html` tiene cinco secciones: 1 Introducción, 2 Referentes, 3 Datos, 4 Salud y 5 Conclusión. La sección «Trabajo hecho en clase» se ha quitado porque no va en esta web. Salud tiene su contenido, salvo la calculadora personal, que está pendiente.
 - `style.css` usa la paleta de la referencia visual (fondo crema, rojos, rosas y amarillo) y es responsive.
 - `script.js` contiene los datos de Spotify ya extraídos (historial, detalle por mes de 13 meses, evolución de artistas, podcasts, biblioteca, playlists, búsquedas, Wrapped, publicidad, Sound Capsule). Los datos están fijos en el código, no se actualizan solos.
 - El gráfico de horas por hora del día no está incluido en esta versión.
 - Publicada en GitHub Pages: https://mario2005junior-star.github.io/Proyecto_Web_Elisava_Mario/ (Settings → Páginas, rama `main`, carpeta `/ (root)`).
-- Dos loops de scroll: barras de Historial (crecen al entrar en pantalla) y gráfica de evolución (se dibuja sola al entrar). Las barras de artistas de «Detalle por mes» se construyen al entrar y al cambiar de mes.
-- La gráfica de evolución mide número de reproducciones al mes (eje con 0, 250, 500 y 750), no tiempo. Las horas están en Historial.
+- Dos loops de scroll: en todos los bloques de Datos, las barras crecen en cascada y los números suben al entrar en pantalla, y en la gráfica de evolución la línea se dibuja sola al entrar. Ambos se borran al salir. Las barras de «Detalle por mes» también se construyen al cambiar de mes.
+- La gráfica de evolución cuenta todas las escuchas del historial de cada artista al mes, también las de menos de 30 segundos (eje con 0, 250, 500 y 750), no tiempo. Las horas están en Historial. La web lo explica en el texto y enlaza la regla de Spotify para artistas.
 - Las fichas del loop y el proceso para repetirlo están en `project-definition/FICHAS-LOOP.md`. El pie de la web enlaza a ese documento.
+- Referentes: ocho referentes con captura, enlace y lo que se lleva de cada uno, según las notas de Figma.
+- Conclusión: datos de escucha, cálculo de dB con las fórmulas OMS y NIOSH, y conclusión personal de Mario Fernandes.
 - Salud: contenido informativo sobre riesgo auditivo (guías de referencia, fórmulas de dosis, tiempos orientativos, señales de alarma y evidencia en jóvenes). La calculadora personal está pendiente.
-- Pendiente: contenido de Referentes, Conclusión y Trabajo hecho en clase; y confirmar la definición de «reproducción» en el archivo de Spotify.
+- Paleta y tipografía de referencia en `project-definition/REFERENCIA-VISUAL.md`.
+- Pendiente: calculadora personal, y comprobar la cifra de Kim y Han (63–67 dB(A) a 60 % de volumen y 105,7 dB(A)).
 
 ## Pregunta de investigación
 «¿Cómo está mi salud auditiva durante un año entero?»
