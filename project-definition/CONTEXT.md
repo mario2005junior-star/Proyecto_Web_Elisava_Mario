@@ -30,7 +30,7 @@ La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Versión
 - La gráfica de evolución mide número de reproducciones al mes (eje con 0, 250, 500 y 750), no tiempo. Las horas están en Historial.
 - Las fichas del loop y el proceso para repetirlo están en `project-definition/FICHAS-LOOP.md`. El pie de la web enlaza a ese documento.
 - Salud: contenido informativo sobre riesgo auditivo (guías de referencia, fórmulas de dosis, tiempos orientativos, señales de alarma y evidencia en jóvenes). La calculadora personal está pendiente.
-- Pendiente: contenido de Referentes, Conclusión, Trabajo hecho en clase y Otros archivos; y confirmar la definición de «reproducción» en el archivo de Spotify.
+- Pendiente: contenido de Referentes, Conclusión y Trabajo hecho en clase; y confirmar la definición de «reproducción» en el archivo de Spotify.
 
 ## Pregunta de investigación
 «¿Cómo está mi salud auditiva durante un año entero?»

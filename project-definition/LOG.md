@@ -8,6 +8,12 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Se quita el apartado Otros archivos
+- **Decisión/cambio:** Se elimina el apartado «Otros archivos» de la sección Datos, por decisión del usuario. Se actualiza `CONTEXT.md`.
+- **Motivo:** El usuario indica que no lo quiere en la web.
+- **Archivos afectados:** `index.html`, `project-definition/CONTEXT.md`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`.
+
 ## 2026-11-24 — Fuentes de la sección Salud
 - **Decisión/cambio:** Se añade un bloque de fuentes con enlaces oficiales: OMS («Making listening safe»), norma OMS/UIT para dispositivos de escucha segura, NIOSH 98-126, OSHA 29 CFR 1910.95, Directiva 2003/10/CE (EUR-Lex) y Kim y Han (2018, BMC Public Health).
 - **Verificado:** los enlaces se han buscado en fuentes oficiales. Confirmado en la fuente: los 84,1–92,4 dB(A) del primer paso de riesgo y el máximo de 113,1 dB(A), la media OMS de 1.100 millones de jóvenes y la cifra de 85 dB(A) de 8 h de NIOSH y del criterio de la OMS para el trabajo. Los modos de la norma H.870 (80 dB(A) para adultos y 75 dB(A) para niños, 40 h semanales) quedan confirmados en la página de la OMS. No se han verificado en fuente las cifras 105,7 dB(A) y 63–67 dB(A) de Kim y Han. Conviene revisarlas antes de la entrega.
