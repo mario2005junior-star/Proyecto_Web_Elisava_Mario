@@ -33,7 +33,7 @@ La raíz contiene `index.html`, `style.css`, `script.js` y `README.md`. Versión
 - Conclusión: datos de escucha, cálculo de dB con las fórmulas OMS y NIOSH, y conclusión personal de Mario Fernandes.
 - Salud: contenido informativo sobre riesgo auditivo (guías de referencia, fórmulas de dosis, tiempos orientativos, señales de alarma y evidencia en jóvenes). La calculadora personal está pendiente.
 - Paleta y tipografía de referencia en `project-definition/REFERENCIA-VISUAL.md`.
-- Pendiente: calculadora personal, y comprobar la cifra de Kim y Han (63–67 dB(A) a 60 % de volumen y 105,7 dB(A)).
+- Pendiente: calculadora personal.
 
 ## Pregunta de investigación
 «¿Cómo está mi salud auditiva durante un año entero?»

@@ -2,6 +2,11 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Quitado el estudio de Kim y Han
+- **Cambio:** Se quitan de Salud las cifras basadas en Kim y Han (fila del 60 % de volumen, primer paso de riesgo, volumen máximo de seis smartphones, fila 2018 de la línea de tiempo y la fuente). En Conclusión, el cálculo de dB se hace a 63 y 67 dB(A) como niveles de ejemplo, sin atribuirlos a ningún estudio.
+- **Motivo:** El usuario decide quitarlo, porque no es importante y no estaba verificado.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — CONTEXT al día con la V1
 - **Cambio:** `CONTEXT.md` refleja la web tal como está: cinco secciones (sin Trabajo hecho en clase), contenido de Referentes y Conclusión, loops de Datos y gráfica, definición de la gráfica, paleta de referencia y pendientes reales (calculadora y Kim y Han).
 - **Archivos afectados:** `project-definition/CONTEXT.md`, `project-definition/LOG.md`.
