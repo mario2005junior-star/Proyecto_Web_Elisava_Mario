@@ -9,9 +9,9 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
 ## 2026-11-24 — Referentes en la web
-- **Cambio:** La sección Referentes muestra las ocho capturas de `img/referentes/` con su enlace. Las capturas las subió el usuario en el chat.
-- **Corrección:** Las primeras descripciones que añadí no salían del archivo de Figma (solo leí nombres y enlaces). Se han quitado. Las descripciones actuales solo describen lo que se ve en la captura.
-- **Pendiente:** confirmar la captura 5 (DRĄSA STUDIO), leer las notas de Figma (solo lectura) para escribir qué se lleva el usuario de cada referente, y decidir si se publica.
+- **Cambio:** La sección Referentes muestra las ocho capturas de `img/referentes/`, con su enlace y lo que el usuario se lleva de cada uno (texto de las notas «¿Qué me llevo?» del archivo de Figma, solo lectura).
+- **Corrección:** Las primeras descripciones que añadí no salían del archivo (solo había leído nombres y enlaces). Se han sustituido por las notas reales.
+- **Pendiente:** confirmar la captura 5 (sin asignar con seguridad a DRĄSA STUDIO).
 - **Archivos afectados:** `index.html`, `img/referentes/`, `project-definition/LOG.md`.
 - **Estado:** en local, sin subir a `main`.
 
