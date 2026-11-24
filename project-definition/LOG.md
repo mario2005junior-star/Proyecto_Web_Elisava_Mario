@@ -8,6 +8,13 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 - **Archivos afectados:** `style.css`, `project-definition/LOG.md`.
 - **Estado:** completado en `main`. Pendiente: revisión visual en escritorio.
 
+## 2026-11-24 — Definición de reproducción en la gráfica
+- **Cambio:** El texto de la gráfica de evolución define qué cuenta cada punto: todas las escuchas del historial, también las de menos de 30 segundos. Se aclara que Spotify cuenta como stream solo las de al menos 30 segundos, con enlace a su ayuda para artistas.
+- **Motivo:** Los datos de la gráfica ya contaban todas las filas del historial. Se ha elegido mantener los datos y aclarar el texto, para no recalcular la gráfica.
+- **Comprobación:** Los valores de la gráfica coinciden con el recuento de todas las filas de cada artista y mes en `StreamingHistory_music_*.json`.
+- **Archivos afectados:** `index.html`, `project-definition/LOG.md`.
+- **Estado:** en local, sin subir a `main`.
+
 ## 2026-11-24 — Revisión visual y accesibilidad
 - **Cambio:** Se marca como hecho el punto de revisión visual y accesibilidad en INSTRUCTIONS.md. El usuario ha revisado la web en escritorio y está conforme. El contraste de texto ya se revisó antes. La adaptación a móvil queda fuera de alcance por decisión del usuario.
 - **Archivos afectados:** `project-definition/INSTRUCTIONS.md`, `project-definition/LOG.md`.
