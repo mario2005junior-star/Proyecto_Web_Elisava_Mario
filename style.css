@@ -248,6 +248,12 @@ select {
 .bloque.anima .relleno { transition: width 0.6s ease; }
 .bloque.anima:not(.en-vista) .relleno { width: 0 !important; }
 
+/* Loop de la gráfica: las líneas se dibujan solas al entrar en pantalla */
+@media (prefers-reduced-motion: no-preference) {
+  #grafica-evolucion path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.3s ease; }
+  #grafica-evolucion.dibuja path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s ease-out; }
+}
+
 /* Móvil */
 @media (max-width: 640px) {
   .cabecera,

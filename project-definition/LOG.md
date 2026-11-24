@@ -2,6 +2,12 @@
 
 Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. Entradas cronológicas, con la más reciente arriba.
 
+## 2026-11-24 — Gráfica de evolución con animación automática
+- **Decisión/cambio:** La gráfica ya no depende del scroll. Al entrar en pantalla, las seis líneas se dibujan solas en unos 2,4 s, una tras otra, y se repiten cada vez que se vuelve al apartado. Con movimiento reducido se muestra completa. Se actualiza la ficha 2 de `FICHAS-LOOP.md`.
+- **Motivo:** Con el scroll, la gráfica se dibujaba solo mientras se bajaba, y en ese tramo no daba tiempo a verla entera.
+- **Archivos afectados:** `script.js`, `style.css`, `project-definition/FICHAS-LOOP.md`, `project-definition/LOG.md`.
+- **Estado:** completado en `main`. Pendiente: comprobar en la web publicada.
+
 ## 2026-11-24 — Versión de CSS y JS para evitar la caché
 - **Decisión/cambio:** Tras el despliegue, la web publicada seguía mostrando las barras vacías. En local la corrección funciona, así que se trata de caché del CSS y del JS. Se añade `?v=2` a los enlaces de `style.css` y `script.js` para forzar la versión nueva.
 - **Motivo:** Que la web publicada muestre las barras llenas.

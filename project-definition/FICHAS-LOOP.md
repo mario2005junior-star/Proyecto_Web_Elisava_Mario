@@ -42,40 +42,39 @@ observador.observe(historial);
 
 ---
 
-## Ficha 2 · Dibujo de la gráfica de evolución
+## Ficha 2 · Dibujo automático de la gráfica de evolución
 
 | Campo | Contenido |
 |---|---|
-| Scroll trabajado | Recorrido completo de la sección «Evolución de artistas» (dentro de Datos). |
-| Qué se repite | La línea de cada artista se dibuja según avanza el scroll y se borra al subir. Se repite en cada pasada. |
-| Disparador | Evento `scroll` (passive) con `requestAnimationFrame`. |
-| Progreso | `(altura de la ventana − top de la sección) / (altura de la sección + altura de la ventana)`, limitado entre 0 y 1. |
-| Estado inicial | `pathLength = 1`, `stroke-dasharray = 1`, `stroke-dashoffset = 1` (línea invisible). |
-| Estado final | `stroke-dashoffset = 0` (línea completa). |
-| Desactivado con | `prefers-reduced-motion: reduce`. La gráfica se muestra completa. |
-| Commit | `e404919`. |
+| Scroll trabajado | Entrada en pantalla de la sección «Evolución de artistas» (dentro de Datos). |
+| Qué se repite | Al entrar en pantalla, las seis líneas se dibujan solas, una tras otra (unos 2,4 s). Al salir, se borran y vuelven a dibujarse la siguiente vez. |
+| Disparador | `IntersectionObserver` sobre `#grafica-evolucion` con `threshold: 0.3`. Añade la clase `dibuja`. |
+| Estado inicial | `stroke-dashoffset: 1` con `pathLength = 1` (línea invisible). |
+| Estado final | `stroke-dashoffset: 0` (línea completa). |
+| Desactivado con | `prefers-reduced-motion: reduce`. La gráfica se muestra completa sin animación. |
+| Commits | `e404919` (primera versión, ligada al scroll), siguiente commit (versión automática). |
 
 **Código clave**
 ```js
-const trazos = $("#grafica-evolucion").querySelectorAll("path");
-trazos.forEach(p => {
-  p.setAttribute("pathLength", "1");
-  p.style.strokeDasharray = "1";
-  p.style.strokeDashoffset = "1";
-});
-const dibuja = () => {
-  const r = seccion.getBoundingClientRect();
-  const avance = Math.min(1, Math.max(0, (window.innerHeight - r.top) / (r.height + window.innerHeight)));
-  trazos.forEach(p => { p.style.strokeDashoffset = (1 - avance).toFixed(3); });
-};
-window.addEventListener("scroll", () => {
-  if (!pendiente) { pendiente = true; requestAnimationFrame(dibuja); }
-}, { passive: true });
+const grafica = $("#grafica-evolucion");
+const trazos = grafica.querySelectorAll("path");
+trazos.forEach(p => p.setAttribute("pathLength", "1"));
+const observadorGrafica = new IntersectionObserver(([entrada]) => {
+  grafica.classList.toggle("dibuja", entrada.isIntersecting);
+  trazos.forEach((p, i) => {
+    p.style.transitionDelay = entrada.isIntersecting ? `${i * 0.2}s` : "0s";
+  });
+}, { threshold: 0.3 });
+observadorGrafica.observe(grafica);
+```
+```css
+#grafica-evolucion path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.3s ease; }
+#grafica-evolucion.dibuja path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s ease-out; }
 ```
 
-**Decisión:** el progreso usa toda la sección, no solo la parte visible, para que la línea llegue completa al final del apartado.
+**Decisión:** la primera versión avanzaba con el scroll, pero en el tramo de la sección que se ve de una vez la gráfica no llegaba a verse entera. Se pasa a una animación por tiempo, que se dispara al entrar en pantalla.
 
-**Cómo comprobarlo:** abrir «3 Datos», bajar hasta «Evolución de artistas». La línea debe dibujarse al bajar y borrarse al subir.
+**Cómo comprobarlo:** abrir «3 Datos», ir a «Evolución de artistas» y esperar. La gráfica debe dibujarse sola, sin mover el scroll.
 
 ---
 

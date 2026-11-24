@@ -240,25 +240,17 @@ function iniciaLoops() {
   );
   observador.observe(historial);
 
-  // Loop 2: la gráfica de evolución se dibuja según el scroll y se borra al subir
-  const seccion = $("#evolucion");
-  const trazos = $("#grafica-evolucion").querySelectorAll("path");
-  trazos.forEach(p => {
-    p.setAttribute("pathLength", "1");
-    p.style.strokeDasharray = "1";
-    p.style.strokeDashoffset = "1";
-  });
-  let pendiente = false;
-  const dibuja = () => {
-    pendiente = false;
-    const r = seccion.getBoundingClientRect();
-    const avance = Math.min(1, Math.max(0, (window.innerHeight - r.top) / (r.height + window.innerHeight)));
-    trazos.forEach(p => { p.style.strokeDashoffset = (1 - avance).toFixed(3); });
-  };
-  window.addEventListener("scroll", () => {
-    if (!pendiente) { pendiente = true; requestAnimationFrame(dibuja); }
-  }, { passive: true });
-  dibuja();
+  // Loop 2: la gráfica de evolución se dibuja sola al entrar en pantalla y se borra al salir
+  const grafica = $("#grafica-evolucion");
+  const trazos = grafica.querySelectorAll("path");
+  trazos.forEach(p => p.setAttribute("pathLength", "1"));
+  const observadorGrafica = new IntersectionObserver(([entrada]) => {
+    grafica.classList.toggle("dibuja", entrada.isIntersecting);
+    trazos.forEach((p, i) => {
+      p.style.transitionDelay = entrada.isIntersecting ? `${i * 0.2}s` : "0s";
+    });
+  }, { threshold: 0.3 });
+  observadorGrafica.observe(grafica);
 }
 
 // ---------- Arranque ----------
