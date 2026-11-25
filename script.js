@@ -215,7 +215,10 @@ function pintaResto() {
     const div = document.createElement("div");
     div.className = "tarjeta";
     div.innerHTML = `<span class="cifra"></span><span></span>`;
+    // Las cifras suben desde 0 al entrar en pantalla, igual que el resto de Datos
     div.children[0].textContent = cifra;
+    div.children[0].dataset.num = cifra;
+    div.children[0].dataset.unidad = "";
     div.children[1].textContent = etiqueta;
     w.appendChild(div);
   }
