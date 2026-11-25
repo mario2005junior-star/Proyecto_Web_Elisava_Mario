@@ -4,7 +4,7 @@ Registro de decisiones confirmadas, cambios relevantes, problemas y soluciones. 
 
 ## 2026-11-25 — Indicador de posición en la web
 - **Cambio:** Barra fija abajo que muestra el apartado actual, el bloque en el que está el visitante y cuántos quedan (por ejemplo, «Datos · bloque 2 de 7 · quedan 5 bloques»). En Referentes cuenta referentes, y en Introducción muestra solo el porcentaje leído. La barra amarilla indica el avance dentro del apartado.
-- **Verificado:** En Chromium, los textos salen bien al cambiar de apartado y al hacer scroll, sin errores de JavaScript.
+- **Verificado:** En Chromium, los textos salen bien al cambiar de apartado y al hacer scroll, sin errores de JavaScript. En la web publicada (GitHub Pages), en Datos al final aparece «Datos · bloque 7 de 7 · último» con la barra completa.
 - **Archivos afectados:** `script.js` (`iniciaIndicador`), `style.css` (`.indicador`), `index.html` (versiones de caché `style.css?v=3` y `script.js?v=4`), `project-definition/LOG.md`.
 - **Estado:** subido a `main` (`6d92f7d`).
 
