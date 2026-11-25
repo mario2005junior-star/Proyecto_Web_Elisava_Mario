@@ -258,10 +258,51 @@ select {
   #grafica-evolucion.dibuja path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s ease-out; }
 }
 
+/* Indicador de posición: dónde estás dentro del apartado y cuánto queda */
+body { padding-bottom: 56px; }
+
+.indicador {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 32px;
+  background: var(--tinta);
+  color: var(--crema);
+  font-size: 14px;
+}
+
+.indicador-texto { white-space: nowrap; }
+
+.indicador-pista {
+  flex: 1;
+  height: 6px;
+  background: rgba(235, 233, 225, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.indicador-relleno {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--amarillo);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .indicador-relleno { transition: width 0.2s linear; }
+}
+
 /* Móvil */
 @media (max-width: 640px) {
   .cabecera,
   main { padding-left: 16px; padding-right: 16px; }
+  .indicador { padding: 10px 16px; gap: 10px; font-size: 12px; }
   .barra { grid-template-columns: 1fr 60px; }
   .barra .pista { grid-column: 1 / -1; grid-row: 2; }
 }

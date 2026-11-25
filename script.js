@@ -310,6 +310,60 @@ function iniciaLoops() {
 
 }
 
+// ---------- Indicador de posición ----------
+// Barra fija abajo: en qué apartado estás, en qué bloque y cuántos quedan
+function iniciaIndicador() {
+  const barra = document.createElement("div");
+  barra.className = "indicador";
+  barra.setAttribute("aria-hidden", "true"); // decorativo: la información ya está en el contenido
+  barra.innerHTML = `<span class="indicador-texto"></span><span class="indicador-pista"><span class="indicador-relleno"></span></span>`;
+  document.body.appendChild(barra);
+  const texto = barra.querySelector(".indicador-texto");
+  const relleno = barra.querySelector(".indicador-relleno");
+  let pendiente = false;
+
+  function actualiza() {
+    pendiente = false;
+    const sec = document.querySelector(".seccion:not([hidden])");
+    if (!sec) return;
+    const enlace = document.querySelector(`.menu a[data-sec="${sec.id}"]`);
+    const nombre = enlace ? enlace.textContent.replace(/^\d+\s*/, "") : "";
+
+    // Avance dentro de la sección: 0 al empezar, 100 % al llegar al final
+    const r = sec.getBoundingClientRect();
+    const recorrido = Math.max(r.height - window.innerHeight, 1);
+    const avance = Math.min(Math.max(-r.top / recorrido, 0), 1);
+    relleno.style.width = (avance * 100) + "%";
+
+    const esReferentes = sec.id === "referentes";
+    const items = esReferentes
+      ? [...sec.querySelectorAll(".lista-referentes > li")]
+      : [...sec.querySelectorAll(":scope > .bloque")];
+    if (!items.length) {
+      texto.textContent = `${nombre} · ${Math.round(avance * 100)} % leído`;
+      return;
+    }
+    // El bloque actual es el último que ha pasado por una línea a un tercio de la pantalla
+    const linea = window.innerHeight * 0.35;
+    let actual = 1;
+    items.forEach((it, i) => { if (it.getBoundingClientRect().top <= linea) actual = i + 1; });
+    const quedan = items.length - actual;
+    const unidad = esReferentes ? "referente" : "bloque";
+    const resto = quedan === 0 ? "último" : `quedan ${quedan} ${quedan === 1 ? unidad : unidad + "s"}`;
+    texto.textContent = `${nombre} · ${unidad} ${actual} de ${items.length} · ${resto}`;
+  }
+
+  function pide() {
+    if (!pendiente) { pendiente = true; requestAnimationFrame(actualiza); }
+  }
+  window.addEventListener("scroll", pide, { passive: true });
+  window.addEventListener("resize", pide);
+  window.addEventListener("hashchange", () => setTimeout(pide, 0));
+  // Al cambiar de apartado desde el menú, se recalcula tras el cambio de sección
+  document.querySelectorAll(".menu a").forEach(a => a.addEventListener("click", () => setTimeout(pide, 0)));
+  pide();
+}
+
 // ---------- Arranque ----------
 pintaHistorial();
 pintaSelectorMes();
@@ -317,3 +371,4 @@ pintaEvolucion();
 pintaResto();
 inicioNavegacion();
 iniciaLoops();
+iniciaIndicador();
